@@ -1,5 +1,5 @@
 <?php
-    define('BASE_URL', 'http://172.16.0.3/GKPT/');
+    define('BASE_URL', 'http://localhost/GKPT/');
     define('ROOT_PATH', realpath(dirname(BASE_URL)));
 
     session_start();

@@ -9,10 +9,7 @@
     $bdd = 'projet_site';
     $connect = mysqli_connect($host, $user, $passwd, $bdd);
 
-if (!$connect){
-    die("Error connecting to database: ".mysqli_connect_error());
-}
-else{
-    echo("connecté");
-}
+    if (!$connect){
+        die("Error connecting to database: ".mysqli_connect_error());
+    }
 ?>

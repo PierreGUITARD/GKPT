@@ -2,7 +2,7 @@
 
 <aside class="welcome_msg">
 
-<h1>Test Projet site</h1>
+<!-- <h1>Test Projet site</h1> -->
 
 <?php
 include(ROOT_PATH.'register.php');
@@ -12,7 +12,7 @@ include(ROOT_PATH.'register.php');
 <!-- <img class="logo" src="static\images\logo-taiga.png" width="150" height="150"> -->
 </div>
 
-<a href="register.php" class="btn">Joignez nous!</a>
+<a href="register.php" class="btn">Rejoignez nous!</a>
 
 
 </aside>

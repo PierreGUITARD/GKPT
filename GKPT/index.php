@@ -1,7 +1,7 @@
 <?php
-require_once('config.php');
-include(ROOT_PATH. 'includes\head_section.php');
-include(ROOT_PATH. 'includes\public_functions.php');
+require_once('GKPT\config.php');
+include(ROOT_PATH. 'GKPT\includes\head_section.php');
+include(ROOT_PATH. 'GKPT\includes\public_functions.php');
 ?>
 
 <title>GKPT | Acceuil</title>
@@ -16,7 +16,7 @@ include(ROOT_PATH. 'includes\public_functions.php');
 <!-- Barre de navigation -->
 
 <?php 
-include(ROOT_PATH.'includes\navbar.php'); 
+include(ROOT_PATH.'GKPT\includes\navbar.php'); 
 ?>
 
 <!-- // Barre de navigation-->
@@ -24,18 +24,18 @@ include(ROOT_PATH.'includes\navbar.php');
 <!-- bannière -->
 
 <?php 
-include(ROOT_PATH.'includes\banner.php');
+include(ROOT_PATH.'GKPT\includes\banner.php');
 ?>
 
 <!-- // bannière -->
 
 <h1>Les machines</h1>
-<a href="machine_cafe.html" title="machine à café"><img src="machine_cafe.jpg"></img></a>
+<a href="GKPT\HTML\machine_cafe.html" title="machine à café"><img src="GKPT\Photo_machine\machine_cafe.jpg"></img></a>
 
 <!-- footer -->
 
 <?php 
-include(ROOT_PATH.'includes\footer.php');
+include(ROOT_PATH.'GKPT\includes\footer.php');
 ?>
 
 <!-- // footer -->

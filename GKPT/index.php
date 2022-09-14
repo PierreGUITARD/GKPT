@@ -31,11 +31,6 @@ include(ROOT_PATH.'/includes/banner.php');
 
 <h1>Les machines</h1>
 
-<!-- <a href="html/machine_cafe.html" title="machine à café"><img src="static/images/machine_cafe.jpg" style="width: 500px; height: 500px"></img></a>
-<a href="html/hydraulis.html" title="machine à café"><img src="static/images/hydraulis.jpg" style="width: 500px; height: 500px"></img></a>
-<a href="html/bras_robot.html" title="machine à café"><img src="static/images/bras_robot.jpg" style="width: 500px; height: 500px"></img></a>
-<a href="html/bras_levier.html" title="machine à café"><img src="static/images/levier.jpg" style="width: 500px; height: 500px"></img></a> -->
-
 <div class="row">
     <div class="col-1">
         <h2>Machine à café</h2>
@@ -45,7 +40,7 @@ include(ROOT_PATH.'/includes/banner.php');
         <button type="button" onclick='location.href="html/machine_cafe.html"'>Voir La machine à café</button>
     </div>
     <div class="col-2">
-        <img src="static/images/machine_cafe.jpg" 
+        <img src="static/images/photo_machines/machine_cafe.jpg" 
         srcset="static/images/photo_machines/machine_cafe(400²).jpg 400w,
         static/images/photo_machines/machine_cafe(800²).jpg 800w"
         sizes="400px,800px(max_width:800px)"
@@ -93,7 +88,7 @@ include(ROOT_PATH.'/includes/banner.php');
         <button type="button" onclick='location.href="html/bras_levier.html"'>Voir Le bras levier</button>
     </div>
     <div class="col-2">
-        <img src="static/images/levier.jpg" 
+        <img src="static/images/photo_machines/levier.jpg" 
         srcset="static/images/photo_machines/levier(400²).jpg 400w,
         static/images/photo_machines/levier(800²).jpg 800w,"
         class="bigThumbnail">

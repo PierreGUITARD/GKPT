@@ -4,9 +4,17 @@
     
     *****************/
                 
-    
-    *{ margin: 0px; padding: 0px; }
+
     *{
+        --colorMain: #ff0000;
+        --colorSecondary: #ff3527;
+        --background: #DDD;
+        --backgroundRow: #DDD;
+        --backgroundNav: #AAA;
+        --textColor: #FFF;
+        --textColor000: #000;
+        margin: 0;
+        padding: 0;
         font-family: 'Lucida Console';
     }
     
@@ -470,4 +478,89 @@
     width: 300px;
     height: 400px;
 
+}
+
+.row{
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    padding: 1rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    background: var(--backgroundRow);
+}
+
+.col-1{
+    position: relative;
+    margin-left: 20px;
+    color: var(--textColor);
+}
+
+.col-1 h2{
+    font-size: 40px;
+}
+
+.col-1 h3{
+    font-size: 20px;
+    color: var(--textColor000);
+    font-weight: 100;
+    margin: 15px 0 5px;
+}
+
+.col-1 p{
+    font-size: 16px;
+    color: var(--textColor000);
+    font-weight: 100;
+    margin: 5px 0;
+}
+
+.col-1 h4{
+    font-size: 17px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.col-1::after{
+    content: '';
+    width: 10px;
+    height: 97%;
+    background: linear-gradient(var(--colorMain), var(--backgroundRow));
+    position: absolute;
+    left: -23px;
+    top: 8px;
+}
+
+.col-2{
+    position: relative;
+    align-items: center;
+}
+
+.col-2 .bigThumbnail{
+    width: 250px;
+    margin-left: 20px;
+}
+
+button{
+    width: 140px;
+    border: 0;
+    padding: 12px 10px;
+    margin-right: 10px;
+    outline: none;
+    color: var(--textColor);
+    background: linear-gradient(to right, var(--colorMain), var(--colorSecondary));
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button:hover{
+    transform: scale(1.05);
+    text-decoration: underline;
+}
+
+button:active{
+    transform: scale(0.95);
+    text-decoration: underline;
 }

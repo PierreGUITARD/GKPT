@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    --colorMain: #ff0000;
+    --colorSecondary: #ff3527;
+    --background: #252525;
+    --backgroundRow: #333;
+    --backgroundNav: #191919;
+    --textColor: #fff;
+    --textColorCCC: #CCC;
+    --textColorBBB: #BBB;
+    --textColorB7: #b7b7b7;
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    background: var(--background);
+}
+
+form{
+    color:#FFF;
+}
+
+form fieldset{
+    padding: 16px;
+    border: 3px solid var(--textColor);
+    border-radius: 8px;
+    width: 50%;
+    margin: 0px auto;
+}
+
+.required{
+    width: auto;
+    border: 2px solid var(--colorMain);
+    background-color: var(--background);
+    color: var(--textColor);
+    padding: 1% 1%;
+    margin: 5px auto;
+    font-size: 100%;
+    border-radius: 7px;
+}
+
+.required::placeholder{
+    color: var(--textColor);
+    font-style: normal;
+}
+
+.nonrequired{
+    width: auto;
+    border: 2px solid (var(--textColor));
+    background-color: var(--background);
+    color: var(--textColor);
+    padding: 1% 1%;
+    margin: 5px auto;
+    font-size: 100%;
+    border-radius: 7px;
+}
+
+.nonrequired::placeholder{
+    color: var(--textColor);
+    font-style: normal;
+}
+
+.legend{
+    color: var(--textColor);
+    font-size: 150%;
+}
+
+.button{
+    width: auto;
+    border: 2px solid var(--textColor);
+    background-color: var(--background);
+    color: var(--textColor);
+    padding: 1% 1%;
+    margin: 20px auto;
+    font-size: 100%;
+    border-radius: 7px;
+}
+
+.selector{
+    width: 40%;
+    border: 2px solid var(--textColor);
+    background-color: var(--background);
+    color: var(--textColor);
+    padding: 1% 1%;
+    margin: 20px auto;
+    font-size: 100%;
+    border-radius: 7px;
+}
+
+.comments{
+    width: 100%;
+    border: 2px solid var(--textColor);
+    background-color: var(--background);
+    color: var(--textColor);
+    padding: 1% 1%;
+    margin: 0px -10%;
+    font-size: 100%;
+    border-radius: 7px;
+}
+
+.comments::placeholder{
+    color: var(--textColor);
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-right: 1%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.navbar{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    padding: .4rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background: var(--backgroundNav);
+    justify-content: center;
+}
+
+#NavLogo{
+    width:50px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+nav{
+    text-align: left;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 15px; 
+    margin-left: 15px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--textColor);
+    font-size: 16px;
+}
+
+nav ul li a:hover{
+    color: var(--textColorCCC);
+    text-decoration: underline;
+}
+
+.title{
+    color: var(--textColor);
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.title2{
+    color: var(--textColor);
+    font-size: 50px;
+}
+
+.subTitle{
+    color: var(--textColor);
+    font-size: 25px;
+    margin-bottom: 0px;
+}
+
+.text{
+    color: var(--textColor);
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.row{
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding: 1rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    background: var(--backgroundRow);
+}
+
+.col-1{
+    position: relative;
+    margin-left: 20px;
+    color: var(--textColor);
+}
+
+.col-1 h2{
+    font-size: 40px;
+}
+
+.col-1 h3{
+    font-size: 20px;
+    color: var(--textColorBBB);
+    font-weight: 100;
+    margin: 15px 0 5px;
+}
+
+.col-1 p{
+    font-size: 16px;
+    color: var(--textColorB7);
+    font-weight: 100;
+    margin: 5px 0;
+}
+
+.col-1 h4{
+    font-size: 17px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+button{
+    width: 140px;
+    border: 0;
+    padding: 12px 10px;
+    margin-right: 10px;
+    outline: none;
+    color: var(--textColor);
+    background: linear-gradient(to right, var(--colorMain), var(--colorSecondary));
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button:hover{
+    transform: scale(1.05);
+    text-decoration: underline;
+}
+
+button:active{
+    transform: scale(0.95);
+    text-decoration: underline;
+}
+
+.col-1::after{
+    content: '';
+    width: 10px;
+    height: 97%;
+    background: linear-gradient(var(--colorMain), var(--backgroundRow));
+    position: absolute;
+    left: -23px;
+    top: 8px;
+}
+
+.col-2{
+    position: relative;
+    align-items: center;
+}
+
+.col-2 .thumbnail{
+    width: 100px;
+    margin-left: 10px;
+}
+
+.col-2 .bigThumbnail{
+    width: 250px;
+    margin-left: 20px;
+}
+
+.col-2 .bigThumbnailNoText{
+    width: 500px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.subTitle2{
+    color: var(--textColor);
+    font-size: 25px;
+}
+
+.footerText{
+    color: var(--background);
+}
+
+.footerText2{
+    color: var(--textColor);
+}
+
+@media only screen and (max-width: 1330px){
+    
+    .title{
+        margin-top: 80px;
+        font-size: 50px;
+    } 
+
+}
+
+@media only screen and (max-width: 561px){
+
+    nav ul{
+        width: 140%;
+        background: var(--backgroundNav);
+        position: absolute;
+        top: 69px;
+        border-radius: 10px;
+        transition: all .35s;
+    }
+
+    nav ul li{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    nav ul li a{
+        font-size: 13px;
+    }
+
+    .row{
+        position: relative;
+        display: inline-flex;
+        margin-top: 0px;
+    }
+
+    .col-2 .bigThumbnail{
+        width: 100px;
+        margin-left: 10px;
+    }
+
+    .col-1{
+        position: relative;
+        margin-left: 15px;
+    }
+    
+    .col-1 h2{
+        font-size: 22px;
+    }
+    
+    .col-1 h3{
+        font-size: 18px;
+        font-weight: 100;
+        margin: 15px 0 5px;
+    }
+    
+    .col-1 p{
+        font-size: 13px;
+        font-weight: 100;
+        margin: 5px 0;
+    }
+    
+    .col-1 h4{
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .title{
+        margin-top: 15px;
+        font-size: 35px;
+        margin-bottom: 25px;
+    }
+
+    .title2{
+        margin-top: 0px;
+        font-size: 35px;
+        margin-bottom: 25px;
+    }
+
+    .subTitle{
+        margin-bottom: 30px;
+        font-size: 24px;
+    }
+
+    button{
+        padding: 8px;
+        margin-top: 10px;
+    }
+
+    .container{
+        padding-top: 1%;
+        padding-left: 3%;
+    }
+}
+
+@media only screen and (max-width: 360px){
+
+    .col-2 .bigThumbnail{
+        width: 70px;
+        margin-left: 5px;
+    }
+
+    .col-2 .thumbnail{
+        width: 70px;
+        margin-left: 0px;
+    }
+
+    .col-1 h2{
+        font-size: 20px;
+    }
+    
+    .col-1 h3{
+        font-size: 15px;
+        margin: 5px 0 0;
+    }
+    
+    .col-1 p{
+        font-size: 12px;
+        margin: 5px 0;
+    }
+    
+    .col-1 h4{
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
+
+    .title{
+        margin-top: 20px;
+        font-size: 25px;
+    }
+
+    .title2{
+        margin-top: 0px;
+        font-size: 25px;
+    }
+
+    .subTitle{
+        margin-bottom: 25px;
+        font-size: 12px;
+    }
+
+    button{
+        font-size: 80%;
+        margin-top: 5px;
+    }
+
+    .legend{
+        color: var(--textColor);
+        font-size: 90%;
+    }
+
+    .required{
+        font-size: 80%;
+    }
+    
+    .nonrequired{
+        font-size: 80%;
+    }
+}

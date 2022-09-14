@@ -30,10 +30,10 @@ include(ROOT_PATH.'/includes/banner.php');
 <!-- // bannière -->
 
 <h1>Les machines</h1>
-<a href="html/machine_cafe.html" title="machine à café"><img src="photo_machine/machine_cafe.jpg" style="width: 500px; height: 500px"></img></a>
-<a href="html/hydraulis.html" title="machine à café"><img src="photo_machine/hydraulis.jpg" style="width: 500px; height: 500px"></img></a>
-<a href="html/bras_robot.html" title="machine à café"><img src="photo_machine/bras_robot.jpg" style="width: 500px; height: 500px"></img></a>
-<a href="html/bras_levier.html" title="machine à café"><img src="photo_machine/levier.jpg" style="width: 500px; height: 500px"></img></a>
+<a href="html/machine_cafe.html" title="machine à café"><img src="static/images/machine_cafe.jpg" style="width: 500px; height: 500px"></img></a>
+<a href="html/hydraulis.html" title="machine à café"><img src="static/images/hydraulis.jpg" style="width: 500px; height: 500px"></img></a>
+<a href="html/bras_robot.html" title="machine à café"><img src="static/images/bras_robot.jpg" style="width: 500px; height: 500px"></img></a>
+<a href="html/bras_levier.html" title="machine à café"><img src="static/images/levier.jpg" style="width: 500px; height: 500px"></img></a>
 <!-- footer -->
 
 <?php 

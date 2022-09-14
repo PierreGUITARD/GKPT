@@ -477,7 +477,6 @@
 .iframe_machinecafe,.iframe_braslevier,.iframe_brasrobot,.iframe_hydraulis{
     width: 300px;
     height: 400px;
-
 }
 
 .row{
@@ -535,6 +534,11 @@
 .col-2{
     position: relative;
     align-items: center;
+}
+
+.col-2 .thumbnail{
+    width: 180px;
+    margin-left: 20px;
 }
 
 .col-2 .bigThumbnail{

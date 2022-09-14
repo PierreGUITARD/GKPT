@@ -29,7 +29,9 @@ include(ROOT_PATH.'/includes/banner.php');
 
 <!-- // bannière -->
 
-<h1>Les machines</h1>
+
+<h1 style="text-align: center;">Les machines</h1>
+
 
 <div class="row">
     <div class="col-1">

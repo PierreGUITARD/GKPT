@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    --background: #FFF;
+    --textColorB7: #e7e7e7;
+    --dark: #000;
+    --blue: #0000bd;
+    --darkblue: #000066;
+    background-color: var(--background);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.iframe_machinecafe {
+    width: 50%;
+    height: 500%;
+    margin: 2px auto;
+    border-radius: 15px;
+    text-align: center
+}

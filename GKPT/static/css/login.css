@@ -29,10 +29,10 @@ form fieldset{
 }
 
 .watermark{
-    /* position: fixed; */
+    position: fixed;
     display: block;
     z-index: 5;
-    margin-left: auto;
+    margin-left: 85%;
     width: 300px;
 }
 

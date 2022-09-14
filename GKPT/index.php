@@ -79,7 +79,7 @@ include(ROOT_PATH.'/includes/banner.php');
         <button type="button" onclick='location.href="html/bras_levier.html"'>Voir Le bras levier</button>
     </div>
     <div class="col-2">
-        <img src="static/images/levier.jpg" class="bigThumbnail">
+        <img src="static/images/levier.jpg" class="thumbnail">
     </div>
 </div>
 <div class="row">

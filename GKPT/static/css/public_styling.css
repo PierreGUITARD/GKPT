@@ -537,6 +537,11 @@
     align-items: center;
 }
 
+.col-2 .thumbnail{
+    width: 150px;
+    margin-left: 20px;
+}
+
 .col-2 .bigThumbnail{
     width: 250px;
     margin-left: 20px;

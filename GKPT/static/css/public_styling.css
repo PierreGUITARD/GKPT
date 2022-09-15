@@ -160,9 +160,8 @@
     
     .navbar ul li a:hover {
     
-    color: #B9E6F2;
-    
-    /* background-color: #334F5C; */
+    color: black;
+    background-color: #d4e0fc;
     
     }
 
@@ -475,8 +474,12 @@
 }
 
 .iframe_machinecafe,.iframe_braslevier,.iframe_brasrobot,.iframe_hydraulis{
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    height: 500px;
+    position: relative;
+    align-items: center;
+    display: inline-flex;
+    
 }
 
 .row{
@@ -567,4 +570,10 @@ button:hover{
 button:active{
     transform: scale(0.95);
     text-decoration: underline;
+}
+
+a:hover {
+    background-color: #d4e0fc;
+    color: black;
+    border-radius: 5px;
 }

@@ -14,11 +14,8 @@
 
 <li><a class="active" href="index.php">Accueil</a></li>
 
-<li><a href="#news">Produits</a></li>
-
 <li><a href="#contact">Contact</a></li>
 
-<li><a href="#about">Qui sommes-nous ?</a></li>
 
 </ul>
 

@@ -96,7 +96,7 @@ include(ROOT_PATH.'/includes/banner.php');
         class="bigThumbnail">
     </div>
 </div>
-<!-- <div class="row">
+<div class="row">
     <div class="col-1">
         <h2>Panneau</h2>
         <h3>Virage à 90</h3>
@@ -107,7 +107,7 @@ include(ROOT_PATH.'/includes/banner.php');
     <div class="col-2">
         <img src="static/images/droite_a_font.png" class="bigThumbnail">
     </div>
-</div> -->
+</div>
 <!-- footer -->
 
 <?php 

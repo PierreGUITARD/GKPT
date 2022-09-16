@@ -74,12 +74,6 @@
     
     }
 
-    /* .login_div {
-        position: relative;
-        display: flex;
-        top: 20%;
-    } */
-
     .Title {
         color: white;
         text-align: center;
@@ -449,10 +443,7 @@
 
 .row{
     display: inline-flex;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-right: 10px;
+    margin:20px;
     padding: 1rem;
     box-shadow: 0 0 40px rgba(0, 0, 0, .3);
     border-radius: 10px;
@@ -506,7 +497,7 @@
 
 .col-2 .thumbnail{
     width: 180px;
-    margin-left: 20px;
+    margin-left: 50px;
 }
 
 .col-2 .bigThumbnail{

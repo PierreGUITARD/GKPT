@@ -36,7 +36,7 @@ include(ROOT_PATH.'/includes/banner.php');
 <div class="row">
     <div class="col-1">
         <h2>Machine à café</h2>
-        <h3>Big description</h3>
+        <h3>Big  test description</h3>
         <p>small description</p>
         <h4>some detail</h4>
         <button type="button" onclick='location.href="html/machine_cafe.html"'>Voir La machine à café</button>

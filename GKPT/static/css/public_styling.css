@@ -73,6 +73,29 @@
     font-size: 1em;
     
     }
+
+    /* .login_div {
+        position: relative;
+        display: flex;
+        top: 20%;
+    } */
+
+    .Title {
+        color: white;
+        text-align: center;
+        font-family: 'Noto Serif', serif;
+        padding-top: 75px;
+    }
+
+    .login_buttons {
+        display: flex;
+        padding-top: 75px;
+        justify-content: center;
+    }
+
+    .logBtn {
+        width: 250px;
+    }
     
     /* CONTAINER DEFAULT */
     
@@ -251,64 +274,6 @@
     background: #374447;
     
     }
-
-    .banner .login_div {
-
-        width: 50%;
-        
-        float: left;
-        
-        }
-        
-        .banner .login_div form {
-        
-        color: white;
-        
-        margin-top: 40px;
-        
-        }
-        
-        .banner .login_div form h2 {
-        
-        color: white;
-        
-        margin-bottom: 20px;
-        
-        font-family: 'Noto Serif', serif;
-        
-        }
-        
-        .banner .login_div form input {
-        
-        width: 60%;
-        
-        color: white;
-        
-        border: 1px solid white;
-        
-        margin: 10px auto;
-        
-        letter-spacing: 1.3px;
-        
-        font-family: 'Noto Serif', serif;
-        
-        }
-        
-        .banner .login_div form button {
-        
-        display: block;
-        
-        background: #006384;
-        
-        margin-left: 20%;
-        
-        font-family: 'Noto Serif', serif;
-        
-        }
-
-        .banner .h2{
-            text-align: center;
-        }
 
 
 .content {

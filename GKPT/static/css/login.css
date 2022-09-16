@@ -29,7 +29,7 @@ form fieldset{
 }
 
 .watermark{
-    position: absolute;
+    position: fixed;
     bottom: 2%;
     right: 2%;
     width: 110px;

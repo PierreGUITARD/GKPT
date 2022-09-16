@@ -12,7 +12,6 @@ include(ROOT_PATH.'register.php');
 <!-- <img class="logo" src="static\images\logo-taiga.png" width="150" height="150"> -->
 </div>
 
-<a href="register.php" class="btn">Rejoignez nous!</a>
 
 
 </aside>
@@ -21,7 +20,7 @@ include(ROOT_PATH.'register.php');
 
 <form action="index.php" method="post" >
 
-<h2 align="char"><font color="white" style="text-align: center">Compte Client</font></h2>
+<h2 align="char"><font color="white" style="text-align: center">Compte</font></h2>
 
 <input type="text" name="username" placeholder="Identifiant" style="text-align: center; color:black">
 

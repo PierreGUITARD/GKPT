@@ -102,7 +102,7 @@ include(ROOT_PATH.'/includes/banner.php');
         <h3>Virage à 90</h3>
         <p>Droite à font</p>
         <h4>some detail</h4>
-        <button type="button" onclick='location.href="https://www.google.com/maps/place/Le+Saint-Buisson+%E2%9C%9D/@48.6110267,2.3493719,285m/data=!3m1!1e3!4m5!3m4!1s0x47e5dd59ead4153d:0x9f3a6c56bf296f9d!8m2!3d48.6111897!4d2.3496038"'>Voir le saint Buisson</button>
+        <button type="button" onclick='location.href="https://www.google.com/maps/place/Buisson+du+Saint+Chabrier/@48.5942342,2.3426642,241m/data=!3m1!1e3!4m5!3m4!1s0x47e5db48c01d3681:0xc7f2c90372b2be17!8m2!3d48.5943158!4d2.3432546"'>Voir le saint Buisson</button>
     </div>
     <div class="col-2">
         <img src="static/images/droite_a_font.png" class="bigThumbnail">

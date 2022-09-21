@@ -1,7 +1,9 @@
 <?php
-require_once('config.php');
-include(ROOT_PATH. '/includes/head_section.php');
-include(ROOT_PATH. '/includes/public_functions.php');
+    require_once('config.php');
+    include(ROOT_PATH. '/includes/head_section.php');
+    include(ROOT_PATH. '/includes/public_functions.php');
+    header("Location: index_apprentis.php");
+    exit();
 ?>
 
 <title>GKPT | Accueil</title>

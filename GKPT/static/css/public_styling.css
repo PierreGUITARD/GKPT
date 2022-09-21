@@ -49,12 +49,7 @@ hr {
     opacity: .25;
 }
     
-    hr { 
-        margin: 10px 0px; 
-        /* opacity: .25;  */
-    }
-    
-    /* BUTTON DEFAULT */
+/* BUTTON DEFAULT */
     
 .btn {
     color: white;

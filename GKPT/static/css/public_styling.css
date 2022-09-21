@@ -49,7 +49,14 @@ hr {
     opacity: .25;
 }
     
-/* BUTTON DEFAULT */
+    hr { 
+        margin: 10px 0px; 
+        /* opacity: .25;  */
+    }
+    
+    /* BUTTON DEFAULT */
+    
+    .btn {
     
 .btn {
     color: white;
@@ -290,7 +297,7 @@ hr {
 }
 
 .iframe_machinecafe,.iframe_braslevier,.iframe_brasrobot,.iframe_hydraulis{
-    width: 400px;
+    width: 600px;
     height: 500px;
     position: relative;
     align-items: center;

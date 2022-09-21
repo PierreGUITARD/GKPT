@@ -23,24 +23,27 @@ include(ROOT_PATH.'/includes/navbar_apprentis.php');
 
 <h1 style="text-align: center;">Les machines</h1>
 
+    <?php
+$machines = getSystems();
 
-<div class="row">
-    <div class="col-1">
-        <h2>Machine à café</h2>
-        <h3>Big description</h3>
-        <p>small description</p>
-        <h4>some detail</h4>
-        <button type="button" onclick='location.href="html/machine_cafe.html"'>Voir La machine à café</button>
+ foreach ($machines as $machine): ?>
+    <div class="row">
+        <div class="col-1">
+            <h2><?php echo $machine['nom_systeme'] ?></h2>
+            <h3><?php echo $machine['description'] ?></h3>
+            <p><?php echo $machine['description'] ?></p>
+            <h4></h4>
+            <button type="button" onclick="location.href='<?php echo BASE_URL. '/HTML/'. $machine['lien']?>'"> Voir <?php echo $machine['nom_systeme'] ?></button>
+        </div>
+        <div class="col-2">
+            <img src="<?php echo BASE_URL. '/static/images/photo_machines/'. $machine['photo']?>">
+        </div>
     </div>
-    <div class="col-2">
-        <img src="static/images/photo_machines/machine_cafe.jpg" 
-        srcset="static/images/photo_machines/machine_cafe(400²).jpg 400w,
-        static/images/photo_machines/machine_cafe(800²).jpg 800w"
-        sizes="400px,800px(max_width:800px)"
-        class="bigThumbnail">
+<?php endforeach
+?>
     </div>
 </div>
-<div class="row">
+<!-- <div class="row">
     <div class="col-1">
         <h2>Hydraulis</h2>
         <h3>Big description</h3>
@@ -86,7 +89,7 @@ include(ROOT_PATH.'/includes/navbar_apprentis.php');
         static/images/photo_machines/levier(800²).jpg 800w,"
         class="bigThumbnail">
     </div>
-</div>
+</div> -->
 <!-- <div class="row">
     <div class="col-1">
         <h2>Panneau</h2>

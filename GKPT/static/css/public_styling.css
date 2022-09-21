@@ -471,7 +471,6 @@
     float: right;
     padding-right: 35%;
     padding-top: 20px;
-<<<<<<< HEAD
 }
 
 .iframe_machinecafe,.iframe_braslevier,.iframe_brasrobot,.iframe_hydraulis{
@@ -577,6 +576,10 @@ a:hover {
     background-color: #d4e0fc;
     color: black;
     border-radius: 5px;
-=======
->>>>>>> liaison-bdd-image-accueil
+}
+
+img{
+    width: 20%;
+    height: 20%;
+
 }

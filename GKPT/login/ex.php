@@ -19,7 +19,6 @@ $result = mysqli_query($success, "INSERT INTO information_client (nom, prenom, m
 if (!$result){
     die("Error with the database: " . mysqli_error($success) . " (" . mysqli_connect_errno() . ")");
 }
-echo "WOOO";
 
 mysqli_close($success);
 ?>

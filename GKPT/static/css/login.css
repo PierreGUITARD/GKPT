@@ -30,10 +30,10 @@ form fieldset{
 
 .watermark{
     position: fixed;
-    display: block;
-    z-index: 5;
-    margin-left: 85%;
-    width: 300px;
+    bottom: 2%;
+    right: 2%;
+    width: 110px;
+    background: transparent;
 }
 
 .inner2{

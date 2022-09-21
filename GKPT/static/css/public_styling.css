@@ -441,6 +441,16 @@
     
 }
 
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-right: 1%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
 .row{
     display: inline-flex;
     margin:20px;

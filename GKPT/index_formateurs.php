@@ -9,21 +9,17 @@ include(ROOT_PATH. '/includes/public_functions.php');
 
 <body>
 
-<!-- Contenu de la page -->
-
-<article class="container">
-
 <!-- Barre de navigation -->
-
-<?php 
-include(ROOT_PATH.'/includes/navbar_formateurs.php'); 
-?>
-
-<!-- // Barre de navigation-->
-
-<h1 style="text-align: center;">Les machines</h1>
-
 <div class="container" align="center">
+    <?php 
+    include(ROOT_PATH.'/includes/navbar_formateurs.php'); 
+    ?>
+
+    <!-- // Barre de navigation-->
+
+    <h1 style="text-align: center;">Les machines</h1>
+
+
     <div class="row">
         <div class="col-1">
             <h2>Machine à café</h2>
@@ -99,7 +95,6 @@ include(ROOT_PATH.'/includes/navbar_formateurs.php');
             <img src="static/images/droite_a_font.png" class="bigThumbnail">
         </div>
     </div> -->
-</div>
 <!-- footer -->
 
 <?php 
@@ -108,7 +103,7 @@ include(ROOT_PATH.'/includes/footer.php');
 
 <!-- // footer -->
 
-</article>
+</div>
 
 <!-- // Contenu de la page -->
 

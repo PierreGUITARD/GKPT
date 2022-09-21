@@ -10,27 +10,25 @@ include(ROOT_PATH. '/includes/public_functions.php');
 <body>
 
 <!-- Contenu de la page -->
-
-<article class="container">
+<div class="container" align="center">
 
 <!-- Barre de navigation -->
 
-<?php 
-include(ROOT_PATH.'/includes/navbar.php'); 
-?>
+    <?php 
+        include(ROOT_PATH.'/includes/navbar.php'); 
+    ?>
 
 <!-- // Barre de navigation-->
 
 <!-- bannière -->
 
-<?php 
-include(ROOT_PATH.'/includes/banner.php');
-?>
+    <?php 
+        include(ROOT_PATH.'/includes/banner.php');
+    ?>
 
 <!-- // bannière -->
 
-<h1 style="text-align: center;">Les machines</h1>
-<div class="container" align="center">
+    <h1 style="text-align: center;">Les machines</h1>
     <div class="row">
         <div class="col-1">
             <h2>Machine à café</h2>
@@ -106,16 +104,12 @@ include(ROOT_PATH.'/includes/banner.php');
             <img src="static/images/droite_a_font.png" class="bigThumbnail">
         </div>
     </div> -->
-</div>
 <!-- footer -->
 
-<?php 
-include(ROOT_PATH.'/includes/footer.php');
-?>
-
-<!-- // footer -->
-
-</article>
+    <?php 
+        include(ROOT_PATH.'/includes/footer.php');
+    ?>
+</div>
 
 <!-- // Contenu de la page -->
 

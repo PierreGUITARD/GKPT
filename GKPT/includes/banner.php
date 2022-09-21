@@ -1,7 +1,7 @@
 <section class="banner">
     
 <?php
-include(ROOT_PATH.'register.php');
+    include(ROOT_PATH.'register.php');
 ?>
 
 <h2 class="Title">Bienvenue !</h2>

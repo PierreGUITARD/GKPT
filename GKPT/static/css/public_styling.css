@@ -44,7 +44,10 @@
     
     ul, ol { margin-left: 40px; }
     
-    hr { margin: 10px 0px; opacity: .25; }
+    hr { 
+        margin: 10px 0px; 
+        /* opacity: .25;  */
+    }
     
     /* BUTTON DEFAULT */
     
@@ -474,7 +477,7 @@
 }
 
 .iframe_machinecafe,.iframe_braslevier,.iframe_brasrobot,.iframe_hydraulis{
-    width: 400px;
+    width: 600px;
     height: 500px;
     position: relative;
     align-items: center;

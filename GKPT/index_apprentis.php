@@ -8,26 +8,16 @@
     </head>
 
     <body>
-
     <!-- Contenu de la page -->
     <div class="container" align="center">
-
-    <!-- Barre de navigation -->
-
         <?php 
             include(ROOT_PATH.'/includes/navbar_apprentis.php'); 
         ?>
-
-    <!-- // Barre de navigation-->
-
     <!-- bannière -->
-
         <?php 
             include(ROOT_PATH.'/includes/banner.php');
         ?>
-
     <!-- // bannière -->
-
         <h1 style="text-align: center;">Les machines</h1>
         <div class="row">
             <div class="col-1">
@@ -105,14 +95,10 @@
             </div>
         </div> -->
     <!-- footer -->
-
         <?php 
             include(ROOT_PATH.'/includes/footer.php');
         ?>
     </div>
-
     <!-- // Contenu de la page -->
-
     </body>
-
 </html>

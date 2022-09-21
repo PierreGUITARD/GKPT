@@ -9,17 +9,12 @@
 
     <body>
 
+    <?php 
+        include(ROOT_PATH.'/includes/navbar_formateurs.php'); 
+    ?>
     <!-- Barre de navigation -->
     <div class="container" align="center">
-        <?php 
-        include(ROOT_PATH.'/includes/navbar_formateurs.php'); 
-        ?>
-
-        <!-- // Barre de navigation-->
-
         <h1 style="text-align: center;">Les machines</h1>
-
-
         <div class="row">
             <div class="col-1">
                 <h2>Machine à café</h2>

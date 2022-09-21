@@ -1,7 +1,7 @@
 <?php
-require_once('config.php');
-include(ROOT_PATH. '/includes/head_section.php');
-include(ROOT_PATH. '/includes/public_functions.php');
+    require_once('config.php');
+    include(ROOT_PATH. '/includes/head_section.php');
+    include(ROOT_PATH. '/includes/public_functions.php');
 ?>
 
     <title>GKPT | Accueil | Formateurs</title>

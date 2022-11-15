@@ -12,16 +12,9 @@ function getSystems() {
 	// envoie de la requete
 	$result = mysqli_query($connect, $sql);
 	
-	// récupère tous les messages sous la forme d’un tableau $final_posts
+	// récupère tous les messages sous la forme d’un tableau $machines
 
 	$machines = mysqli_fetch_all($result, MYSQLI_ASSOC);
-	
-
-	// $final_posts = array();
-	// foreach ($posts as $post) {
-	// 	$post['categorie'] = getPostTopic($post['id']); // obtenir la caégorie d'un produit
-	// 	array_push($final_posts, $post);
-	// }
 	return $machines;
 }
 /* * * * * * * * * * * * * * *

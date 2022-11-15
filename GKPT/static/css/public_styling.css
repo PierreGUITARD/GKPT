@@ -473,7 +473,7 @@
     padding-top: 20px;
 }
 
-.iframe_machinecafe,.iframe_braslevier,.iframe_brasrobot,.iframe_hydraulis{
+.photo{
     width: 400px;
     height: 500px;
     position: relative;
@@ -577,9 +577,12 @@ a:hover {
     color: black;
     border-radius: 5px;
 }
+<<<<<<< Updated upstream
 
 img{
     width: 20%;
     height: 20%;
 
 }
+=======
+>>>>>>> Stashed changes

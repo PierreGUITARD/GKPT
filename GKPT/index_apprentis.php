@@ -23,6 +23,7 @@ include(ROOT_PATH.'/includes/navbar_apprentis.php');
 
 <h1 style="text-align: center;">Les machines</h1>
 
+<<<<<<< Updated upstream
     <?php
 $machines = getSystems();
 
@@ -90,6 +91,21 @@ $machines = getSystems();
         class="bigThumbnail">
     </div>
 </div> -->
+=======
+
+<div class="row">
+<?php
+$machines = getSystems();
+
+ foreach ($machines as $machine): ?>
+    <section >
+         <img  src="<?php echo BASE_URL. '/static/images/'. $machine['photo']?>">
+        <span><?php echo $machine['nom_systeme'] ?></span>
+    </section>
+<?php endforeach
+?>
+</div>
+>>>>>>> Stashed changes
 <!-- <div class="row">
     <div class="col-1">
         <h2>Panneau</h2>

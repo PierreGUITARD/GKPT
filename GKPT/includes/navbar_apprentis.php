@@ -1,4 +1,4 @@
-<nav class="navbar2">
+<nav class="navbar">
     <div class="logo_div">
         <style>
             @import url('http://fonts.cdnfonts.com/css/valorant');

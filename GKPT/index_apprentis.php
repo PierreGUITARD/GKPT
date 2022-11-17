@@ -20,8 +20,7 @@ include(ROOT_PATH.'/includes/navbar_apprentis.php');
 ?>
 
 <!-- // Barre de navigation-->
-
-<h1 style="text-align: center;">Les machines</h1>
+<br> <br>
 
     <?php
 $machines = getSystems();
@@ -64,8 +63,6 @@ include(ROOT_PATH.'/includes/footer.php');
 <!-- // footer -->
 
 </article>
-
-<!-- // Contenu de la page -->
 
 </body>
 

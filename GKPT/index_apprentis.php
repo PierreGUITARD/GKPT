@@ -36,7 +36,7 @@ $machines = getSystems();
             <button type="button" onclick="location.href='<?php echo BASE_URL. '/HTML/'. $machine['lien']?>'"> Voir <?php echo $machine['nom_systeme'] ?></button>
         </div>
         <div class="col-2">
-            <img src="<?php echo BASE_URL. '/static/images/photo_machines/'. $machine['photo']?>">
+            <img class="bigThumbnail"  src="<?php echo BASE_URL. '/static/images/photo_machines/'. $machine['photo']?>">
         </div>
     </div>
 <?php endforeach

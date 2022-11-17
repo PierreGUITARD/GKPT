@@ -42,7 +42,6 @@ $machines = getSystems();
 <?php endforeach
 ?>
     </div>
-</div>
 
 <!-- <div class="row">
     <div class="col-1">

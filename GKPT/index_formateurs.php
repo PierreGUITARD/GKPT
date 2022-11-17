@@ -24,7 +24,7 @@ include(ROOT_PATH.'/includes/navbar_formateurs.php');
 <h1 style="text-align: center;">Les machines</h1>
 
 
-<div class="row">
+
 <?php
 $machines = getSystems();
 

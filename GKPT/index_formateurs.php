@@ -29,10 +29,18 @@ include(ROOT_PATH.'/includes/navbar_formateurs.php');
 $machines = getSystems();
 
  foreach ($machines as $machine): ?>
-    <section >
-         <img src="<?php echo BASE_URL. '/static/images/'. $machine['photo']?>" class="photo">
-        <span><?php echo $machine['nom_systeme'] ?></span>
-    </section>
+    <div class="row">
+        <div class="col-1">
+            <h2><?php echo $machine['nom_systeme'] ?></h2>
+            <h3><?php echo $machine['description'] ?></h3>
+            <p><?php echo $machine['description'] ?></p>
+            <h4></h4>
+            <button type="button" onclick="location.href='<?php echo BASE_URL. '/HTML/'. $machine['lien']?>'"> Voir <?php echo $machine['nom_systeme'] ?></button>
+        </div>
+        <div class="col-2">
+            <img src="<?php echo BASE_URL. '/static/images/photo_machines/'. $machine['photo']?>">
+        </div>
+    </div>
 <?php endforeach
 ?>
 </div>

@@ -23,7 +23,6 @@ include(ROOT_PATH.'/includes/navbar_apprentis.php');
 
 <h1 style="text-align: center;">Les machines</h1>
 
-<<<<<<< Updated upstream
     <?php
 $machines = getSystems();
 
@@ -44,68 +43,7 @@ $machines = getSystems();
 ?>
     </div>
 </div>
-<!-- <div class="row">
-    <div class="col-1">
-        <h2>Hydraulis</h2>
-        <h3>Big description</h3>
-        <p>small description</p>
-        <h4>some detail</h4>
-        <button type="button" onclick='location.href="html/hydraulis.html"'>Voir Hydraulis</button>
-    </div>
-    <div class="col-2">
-        <img src="static/images/photo_machines/hydraulis.jpg" 
-        srcset="static/images/photo_machines/hydraulis(400²).jpg 400w,
-        static/images/photo_machines/hydraulis(800²).jpg 800w"
-        sizes="400px,800px(max_width:800px)"
-        class="bigThumbnail">
-    </div>
-</div>
-<div class="row">
-    <div class="col-1">
-        <h2>Bras robot</h2>
-        <h3>Big description</h3>
-        <p>small description</p>
-        <h4>some detail</h4>
-        <button type="button" onclick='location.href="html/bras_robot.html"'>Voir Le bras robot</button>
-    </div>
-    <div class="col-2">
-        <img src="static/images/photo_machines/bras_robot.jpg" 
-        srcset="static/images/photo_machines/bras_robot(400²).jpg 400w,
-        static/images/photo_machines/bras_robot(800²).jpg 800w"
-        sizes="400px,800px(max_width:800px)"
-        class="bigThumbnail">
-    </div>
-</div>
-<div class="row">
-    <div class="col-1">
-        <h2>Bras levier</h2>
-        <h3>Big description</h3>
-        <p>small description</p>
-        <h4>some detail</h4>
-        <button type="button" onclick='location.href="html/bras_levier.html"'>Voir Le bras levier</button>
-    </div>
-    <div class="col-2">
-        <img src="static/images/photo_machines/levier.jpg" 
-        srcset="static/images/photo_machines/levier(400²).jpg 400w,
-        static/images/photo_machines/levier(800²).jpg 800w,"
-        class="bigThumbnail">
-    </div>
-</div> -->
-=======
 
-<div class="row">
-<?php
-$machines = getSystems();
-
- foreach ($machines as $machine): ?>
-    <section >
-         <img  src="<?php echo BASE_URL. '/static/images/'. $machine['photo']?>">
-        <span><?php echo $machine['nom_systeme'] ?></span>
-    </section>
-<?php endforeach
-?>
-</div>
->>>>>>> Stashed changes
 <!-- <div class="row">
     <div class="col-1">
         <h2>Panneau</h2>

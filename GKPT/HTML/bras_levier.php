@@ -11,18 +11,24 @@
     <h1 class="title" style="text-align: center;">Bras levier</h1>
 </header>
 <body>
+<div class="container">
+        <h1>Déscription génerale</h1>
 
-    <?php 
-    include(ROOT_PATH.'/includes/navbar.php'); 
-    ?>
+        <?php
+            $requete_sql = "SELECT * FROM `doc_technique` WHERE `id_Systeme` = 4 ;";
+            $resultat = mysqli_query($connect,$requete_sql);
+            $resultat_requete = mysqli_fetch_all($resultat,MYSQLI_ASSOC);
+            // print_r($resultat_requete);
 
-    <div class="container">
-        <iframe src="../static/Genres_Genres_04Ledocumenttechnique.pdf" class="iframe_braslevier"></iframe>
-        <iframe src="../static/Genres_Genres_04Ledocumenttechnique.pdf" class="iframe_braslevier"></iframe>
-        <iframe src="../static/Genres_Genres_04Ledocumenttechnique.pdf" class="iframe_braslevier"></iframe>
-        <iframe src="../static/Genres_Genres_04Ledocumenttechnique.pdf" class="iframe_braslevier"></iframe>
-        <iframe src="../static/Genres_Genres_04Ledocumenttechnique.pdf" class="iframe_braslevier"></iframe>
-        <iframe src="../static/Genres_Genres_04Ledocumenttechnique.pdf" class="iframe_braslevier"></iframe>
+            foreach($resultat_requete as $document){
+                $chemin_acces_pdf = "../static/".$document["chemin"];
+                // echo $chemin_acces_pdf;
+                ?>
+                <iframe src="<?php echo $chemin_acces_pdf; ?>" class="iframe_levier"></iframe>
+            <?php 
+            }; 
+            ?> 
+        <hr>
     </div>
 </body>
 <footer>

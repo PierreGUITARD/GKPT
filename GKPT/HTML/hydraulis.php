@@ -19,12 +19,21 @@
 
     <div class="container">
         <h1>Déscription génerale</h1>
-        <iframe src="../static/Genres_Genres_04Ledocumenttechnique.pdf#toolbar=0" class="iframe_hydraulis"></iframe>
-        <iframe src="../static/Genres_Genres_04Ledocumenttechnique.pdf#toolbar=0" class="iframe_hydraulis"></iframe>
-        <iframe src="../static/Genres_Genres_04Ledocumenttechnique.pdf#toolbar=0" class="iframe_hydraulis"></iframe>
-        <iframe src="../static/Genres_Genres_04Ledocumenttechnique.pdf#toolbar=0" class="iframe_hydraulis"></iframe>
-        <iframe src="../static/Genres_Genres_04Ledocumenttechnique.pdf#toolbar=0" class="iframe_hydraulis"></iframe>
-        <iframe src="../static/Genres_Genres_04Ledocumenttechnique.pdf#toolbar=0" class="iframe_hydraulis"></iframe>
+
+        <?php
+            $requete_sql = "SELECT * FROM `doc_technique` WHERE `id_Systeme` = 2 ;";
+            $resultat = mysqli_query($connect,$requete_sql);
+            $resultat_requete = mysqli_fetch_all($resultat,MYSQLI_ASSOC);
+            // print_r($resultat_requete);
+
+            foreach($resultat_requete as $document){
+                $chemin_acces_pdf = "../static/".$document["chemin"];
+                // echo $chemin_acces_pdf;
+                ?>
+                <iframe src="<?php echo $chemin_acces_pdf; ?>" class="iframe_hydraulis"></iframe>
+            <?php 
+            }; 
+            ?> 
         <hr>
     </div>
 </body>

@@ -12,17 +12,24 @@
 </header>
 <body>
 
-    <?php 
-    include(ROOT_PATH.'/includes/navbar.php'); 
-    ?>
+<div class="container">
+        <h1>Déscription génerale</h1>
 
-    <div class="container">
-        <iframe src="../static/Genres_Genres_04Ledocumenttechnique.pdf" class="iframe_brasrobot"></iframe>
-        <iframe src="../static/Genres_Genres_04Ledocumenttechnique.pdf" class="iframe_brasrobot"></iframe>
-        <iframe src="../static/Genres_Genres_04Ledocumenttechnique.pdf" class="iframe_brasrobot"></iframe>
-        <iframe src="../static/Genres_Genres_04Ledocumenttechnique.pdf" class="iframe_brasrobot"></iframe>
-        <iframe src="../static/Genres_Genres_04Ledocumenttechnique.pdf" class="iframe_brasrobot"></iframe>
-        <iframe src="../static/Genres_Genres_04Ledocumenttechnique.pdf" class="iframe_brasrobot"></iframe>
+        <?php
+            $requete_sql = "SELECT * FROM `doc_technique` WHERE `id_Systeme` = 3 ;";
+            $resultat = mysqli_query($connect,$requete_sql);
+            $resultat_requete = mysqli_fetch_all($resultat,MYSQLI_ASSOC);
+            // print_r($resultat_requete);
+
+            foreach($resultat_requete as $document){
+                $chemin_acces_pdf = "../static/".$document["chemin"];
+                // echo $chemin_acces_pdf;
+                ?>
+                <iframe src="<?php echo $chemin_acces_pdf; ?>" class="iframe_brasrobot"></iframe>
+            <?php 
+            }; 
+            ?> 
+        <hr>
     </div>
 </body>
 <footer>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 17, 2022 at 10:03 AM
+-- Generation Time: Nov 17, 2022 at 02:08 PM
 -- Server version: 5.7.24
 -- PHP Version: 8.0.1
 
@@ -46,7 +46,8 @@ CREATE TABLE `doc_pedago` (
   `taille` int(11) NOT NULL,
   `type` varchar(100) NOT NULL,
   `format` varchar(100) NOT NULL,
-  `date` date DEFAULT NULL
+  `date_exp` date DEFAULT NULL,
+  `date_soumission` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -63,6 +64,16 @@ CREATE TABLE `doc_technique` (
   `taille` int(11) NOT NULL,
   `type` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `doc_technique`
+--
+
+INSERT INTO `doc_technique` (`id_doc_technique`, `id_Systeme`, `nom_doc`, `chemin`, `taille`, `type`) VALUES
+(3, 1, 'PDF Test2', 'Genres_Genres_04Ledocumenttechnique.pdf', 620000, 'pdf'),
+(4, 2, 'PDF Test3', 'Genres_Genres_04Ledocumenttechnique.pdf', 620000, 'pdf'),
+(5, 3, 'PDF Test4', 'Genres_Genres_04Ledocumenttechnique.pdf', 620000, 'pdf'),
+(6, 4, 'PDF Test5', 'Genres_Genres_04Ledocumenttechnique.pdf', 620000, 'pdf');
 
 -- --------------------------------------------------------
 
@@ -90,6 +101,16 @@ CREATE TABLE `systeme` (
   `photo` varchar(250) DEFAULT NULL,
   `numero_serie` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `systeme`
+--
+
+INSERT INTO `systeme` (`id_systeme`, `nom_systeme`, `nom_fabricant`, `description`, `photo`, `numero_serie`) VALUES
+(1, 'Ecol\'Cafe', 'Aforp', 'Machine pour fabriquer les dossettes à café', 'machine_cafe.jpg', 1),
+(2, 'hydraulis', 'Aforp', 'Machine reproduisant un barrage hydraulique', 'hydraulis.jpg', 1),
+(3, 'Staubli', 'Aforp', 'Bras robot', 'bras_robot.jpg', 1),
+(4, 'Pont Levage', 'Aforp', 'Machine de levage', 'levier.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -163,13 +184,13 @@ ALTER TABLE `doc_pedago`
 -- AUTO_INCREMENT for table `doc_technique`
 --
 ALTER TABLE `doc_technique`
-  MODIFY `id_doc_technique` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_doc_technique` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `systeme`
 --
 ALTER TABLE `systeme`
-  MODIFY `id_systeme` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_systeme` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `utilisateurs`

@@ -393,3 +393,9 @@ a:hover {
     color: black;
     border-radius: 5px;
 }
+
+img{
+    width: 20%;
+    height: 20%;
+
+}

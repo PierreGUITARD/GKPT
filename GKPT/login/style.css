@@ -17,7 +17,10 @@ form fieldset{
     background-color: var(--textColorB7);
     border-radius: 30px;
     width: 40%;
-    margin: 50px auto;
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    margin: -25px 0 0 -25px;
 }
 
 .thumbnail{

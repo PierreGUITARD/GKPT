@@ -63,10 +63,6 @@ form fieldset{
     z-index: -1;
 }
 
-.inner2{
-    border: 3px solid var(--lightDark);
-}
-
 .required{
     width: 70%;
     border: 2px solid var(--red);
@@ -114,7 +110,18 @@ form fieldset{
     margin: 20px auto;
 }
 
-.Text2{
+.button{
+    width: auto;
+    border: 5px solid var(--blue);
+    background-color: var(--blue);
+    color: var(--background);
+    padding: 1% 5%;
+    margin: 30px auto;
+    font-size: 120%;
+    border-radius: 15px;
+}
+
+/* .Text2{
     color: var(--dark);
     font-size: 150%;
     background-color: var(--textColorB7);
@@ -130,17 +137,6 @@ form fieldset{
 .legend{
     color: var(--background);
     font-size: 150%;
-}
-
-.button{
-    width: auto;
-    border: 5px solid var(--blue);
-    background-color: var(--blue);
-    color: var(--background);
-    padding: 1% 5%;
-    margin: 30px auto;
-    font-size: 120%;
-    border-radius: 15px;
 }
 
 .selector{
@@ -167,4 +163,4 @@ form fieldset{
 
 .comments::placeholder{
     color: var(--background);
-}
+} */

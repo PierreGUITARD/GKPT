@@ -16,7 +16,7 @@
 <!-- Barre de navigation -->
 
 <?php 
-include(ROOT_PATH.'/includes/navbar_apprentis.php'); 
+include(ROOT_PATH.'/includes/navbar.php'); 
 ?>
 
 <!-- // Barre de navigation-->

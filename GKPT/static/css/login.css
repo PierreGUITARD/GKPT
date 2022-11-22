@@ -25,7 +25,6 @@ form fieldset{
 }
 
 .thumbnail{
-    background: transparent;
     width: 250px;
     border: 5px solid var(--background);
     border-radius: 20px;
@@ -119,6 +118,17 @@ form fieldset{
     margin: 30px auto;
     font-size: 120%;
     border-radius: 15px;
+}
+
+footer {
+    position: fixed;
+    left: 2.5%;
+    bottom: 10px;
+    width: 95%;
+    background-color: var(--blue);
+    border-radius: 20px;
+    color: white;
+    text-align: center;
 }
 
 /* .Text2{

@@ -8,7 +8,7 @@
     <body>
         <nav class="navbar">
             <img src="static/Images/logo ecole.png" class="thumbnail2">
-            </nav>
+        </nav>
         <img src="static/Images/logo ecole.png" class="thumbnail">
     </body>
 </html>

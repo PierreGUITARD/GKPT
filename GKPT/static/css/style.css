@@ -181,6 +181,7 @@ form fieldset{
 
 
 /* rectangle contenant l'affichage des systemes */
+
 .rectangle-gris {
     position: absolute;
     display: grid;
@@ -207,7 +208,7 @@ form fieldset{
 .row h2{
     font-size: 30px;
     text-align: center;
-
+    margin-top: 0px;
 }
 
 /* .col-1{

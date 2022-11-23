@@ -27,15 +27,12 @@ $machines = getSystems();
 
  foreach ($machines as $machine): ?>
     <div class="row">
-        <div>
-            <h2><?php echo $machine['nom_systeme'] ?></h2>
-        </div>
-        <div>
-            <img class="bigThumbnail"  src="<?php echo BASE_URL. '/static/images/photo_machines/'. $machine['photo']?>"></br>
+        <h2><?php echo $machine['nom_systeme'] ?></h2>
+        <img class="bigThumbnail"  src="<?php echo BASE_URL. '/static/images/photo_machines/'. $machine['photo']?>"></br>
+        <div class="row2">
             <button type="button" class="button-doc" onclick="location.href='<?php echo BASE_URL. '/systeme/'. $machine['lien']?>'">Pédago </button>
             <button type="button" class="button-doc" onclick="location.href='<?php echo BASE_URL. '/systeme/'. $machine['lien']?>'">Technique</button>
         </div>
-    </div>
 <?php endforeach
 ?>
     </div>

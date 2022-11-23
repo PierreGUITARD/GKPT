@@ -12,15 +12,13 @@
 
     if(isset($_POST['submit'])){
         
-        $nom_systeme= $_POST['nom_systeme'];
-        $nom_fabricant = $_POST['nom_fabricant'];
-        $description= $_POST['description'];
-        $photo = $_POST['photo'];
-        $numero_serie =$_POST['numero_serie'];
+        $nom_utilisateur = $_POST['nom_utilisateur'];
+        // $prenom_etudiant = $_POST['prenom_etudiant'];
+        $email = $_POST['email'];
+        // $mot_de_passe_edt = $_POST['mot_de_passe_edt'];
 
         // $hash_mot_de_passe = password_hash($mot_de_passe_edt, PASSWORD_DEFAULT);
-        
-        $sql = "INSERT INTO `systeme`(`nom_systeme`, `nom_fabricant`, `description`, `photo`, `numero_serie`) VALUES('$nom_systeme','$email', '$description', '$photo', '$numero_serie')";
+        $sql = "INSERT INTO `utilisateurs`(`nom_utilisateur`, `email`) VALUES('$nom_utilisateur','$email')";
         // print_r ($sql);
         $result = mysqli_query($connect , $sql);
 
@@ -42,19 +40,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajouter des ressources</title>
+    <title>Ajouter des etudiants</title>
     <!-- Bootstrap  OPTIONEL -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
     <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: blue; color:white;">
-        Ajouter d'un systeme
+        Ajouter des etudiants
     </nav>
 
     <div class="container">
         <div class="text-center mb-4">
-            <h3>Ajouter d'un systeme</h3>
-            <p class="text-muted">Completez le formulaire ci-dessous afin d'ajouter une ressource</p>
+            <h3>Ajouter Un Etudiant</h3>
+            <p class="text-muted">Completez le formulaire ci-dessous afin d'ajouter un etudiant</p>
         </div>
 
         <div class="container  justify-content-center ">
@@ -62,24 +60,12 @@
         <form action="" method="post" style="width:10vw; min-width:700px;">
                 
                 <div class="col mb-3 pr-50">
-                    <label class="form-label">Systeme </label>
-                    <input type="text" class="form-control" name="nom_systeme" placeholder="nom du systeme">
+                    <label class="form-label">Nom Utilisteur </label>
+                    <input type="text" class="form-control" name="nom_utlisataeur" placeholder="Ton jolie nom">
                 </div>
                 <div class="col mb-3 pr-50">
-                    <label class="form-label">Description </label>
-                    <input type="text" class="form-control" name="description" placeholder="description">
-                </div>
-                <div class="col mb-3 pr-50">
-                    <label class="form-label">numero_serie</label>
-                    <input type="text" class="form-control" name="numero_serie" placeholder="numero de serie">
-                </div>
-                <div class="col mb-3 pr-50">
-                    <label class="form-label">Image</label>
-                    <input type="text" id="avatar" name="photo">
-                </div>
-                <div class="col mb-3 pr-50">
-                    <label class="form-label">Fabricant </label>
-                    <input type="mail" class="form-control" name="nom_fabricant" placeholder="Nom du fabricant">
+                    <label class="form-label">Email: </label>
+                    <input type="mail" class="form-control" name="email" placeholder="Djhon@aforp.eu">
                 </div>
             
                <div>

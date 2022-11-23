@@ -182,37 +182,34 @@ form fieldset{
 
 /* rectangle contenant l'affichage des systemes */
 .rectangle-gris {
-    
-position: absolute;
-display: grid;
-grid-template-columns: repeat(3, 32.01%);
-gap : 2%;
-overflow-y: scroll;
-width: 95%;
-height: 72%;
-left: 2.5%;
-top: 17.5%;
-background: #dbdada;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    overflow-y: scroll;
+    width: 95%;
+    height: 72%;
+    left: 2.5%;
+    top: 17.5%;
+    background: #dbdada;
 }
 
 .row{
-    /* display: inline-flex; */
     align-content: center;
-    margin:20px;
-    width: 300px;
-    height: 300px;
-    padding: 1rem;
+    margin: 20px;
+    width: auto;
+    height: auto;
+    padding: 2rem;
     box-shadow: 0 0 40px rgba(0, 0, 0, .5);
     border-radius: 10px;
     background: #FFF;
 }
-
 
 .row h2{
     font-size: 30px;
     text-align: center;
 
 }
+
 /* .col-1{
     position: relative;
     margin-left: 20px;
@@ -268,12 +265,10 @@ background: #dbdada;
 
 .bigThumbnail{
     display: block;
-    width: 150px;
-    height: 150px;
-    /* align-items: center; */
+    width: 70%;
+    height: 70%;
     margin-left: auto; 
     margin-right: auto;
-    /* padding-right: 15%;  */
 }
 
 .button-doc{

@@ -8,6 +8,7 @@
     --darkblue: #000066;
     --red : #F00;
     --lightDark: #222;
+    --gray : #BBBBBB;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -25,9 +26,11 @@ form fieldset{
 }
 
 .thumbnail{
+    position: fixed;
     width: 250px;
     border: 5px solid var(--background);
     border-radius: 20px;
+    z-index: 2;
 }
 
 .thumbnail2{
@@ -56,10 +59,10 @@ form fieldset{
     overflow: hidden;
     position: fixed;
     width: 100%;
-    background: var(--blue);
+    background: var(--darkblue);
     margin-top: -0.5rem;
     margin-left: -.5rem;
-    z-index: -1;
+    z-index: 1;
 }
 
 .required{
@@ -111,12 +114,24 @@ form fieldset{
 
 .button{
     width: auto;
-    border: 5px solid var(--blue);
-    background-color: var(--blue);
+    border: 5px solid var(--darkblue);
+    background-color: var(--darkblue);
     color: var(--background);
     padding: 1% 5%;
     margin: 30px auto;
     font-size: 120%;
+    border-radius: 15px;
+}
+
+.button-doc{
+    display: block;
+    width: auto;
+    border: 1px solid var(--darkblue);
+    background-color: var(--darkblue);
+    color: var(--background);
+    /* margin-left: auto;
+    margin-right: auto; */
+    font-size: 100%;
     border-radius: 15px;
 }
 
@@ -125,7 +140,7 @@ footer {
     left: 2.5%;
     bottom: 10px;
     width: 95%;
-    background-color: var(--blue);
+    background-color: var(--darkblue);
     border-radius: 20px;
     color: white;
     text-align: center;
@@ -174,3 +189,62 @@ footer {
 .comments::placeholder{
     color: var(--background);
 } */
+
+.rectangle-gris{
+    display: grid;
+    grid-template-columns: repeat(3, 32.01%);
+    gap: 2%;
+    position: absolute;
+    overflow-Y: scroll;
+    width: 95%;
+    height: 72%;
+    top: 18%;
+    left: 2.5%;
+    background: var(--gray);
+}
+
+.row{
+    margin: 1.5%;
+    box-shadow: 0 0 40px rgba(5, 1, 1, 0.5);
+    background: var(--background);
+    border-radius: 30px;
+}
+
+.row h2{
+    font-size: 40px;
+    text-align: center;
+}
+
+.row h3{
+    font-size: 20px;
+    color: var(--textColor000);
+    font-weight: 100;
+    margin: 15px 0 5px;
+}
+
+.row p{
+    font-size: 16px;
+    color: var(--textColor000);
+    font-weight: 100;
+    margin: 5px 0;
+}
+
+.row h4{
+    font-size: 17px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.row .thumbnail{
+    position: relative;
+    align-self: center;
+    width: 180px;
+    margin-left: 50px;
+}
+
+.row .bigThumbnail{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}

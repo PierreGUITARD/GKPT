@@ -8,6 +8,9 @@
 <title>Bras Levier</title>
 </head>
 <header>
+<?php 
+        include(BASE_URL.'/includes/navbar.php'); 
+        ?>
     <h1 class="title" style="text-align: center;">Bras levier</h1>
 </header>
 <body>

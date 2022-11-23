@@ -11,31 +11,34 @@
 
 <!-- Contenu de la page -->
 
+
+
+<!-- Barre de navigation -->
+
 <?php 
 include(ROOT_PATH.'/includes/navbar.php'); 
 ?>
 
+<!-- // Barre de navigation-->
+<br> <br>
 <article class="rectangle-gris">
+    <?php
+$machines = getSystems();
 
-<!-- Barre de navigation -->
-
-<!-- // Barre de navigation-->  
-
-<?php
-    $machines = getSystems();
-
-    foreach ($machines as $machine): ?>
-        <div class="row">
+ foreach ($machines as $machine): ?>
+    <div class="row">
+        <div>
             <h2><?php echo $machine['nom_systeme'] ?></h2>
-            <img class="bigThumbnail" src="<?php echo BASE_URL.'/static/images/photo_machines/'.$machine['photo']?>">
-            <div class="test">
-                <button class="button-doc" onclick="location.href='<?php echo BASE_URL. '/HTML/'. $machine['lien']?>'"> Voir <?php echo $machine['nom_systeme'] ?></button>
-                <button class="button-doc" onclick="location.href='<?php echo BASE_URL. '/HTML/'. $machine['lien']?>'"> Voir <?php echo $machine['nom_systeme'] ?></button>
-            </div>
         </div>
-    <?php endforeach
-    ?>
-</div>
+        <div>
+            <img class="bigThumbnail"  src="<?php echo BASE_URL. '/static/images/photo_machines/'. $machine['photo']?>"></br>
+            <button type="button" class="button-doc" onclick="location.href='<?php echo BASE_URL. '/systeme/'. $machine['lien']?>'">Pédago </button>
+            <button type="button" class="button-doc" onclick="location.href='<?php echo BASE_URL. '/systeme/'. $machine['lien']?>'">Technique</button>
+        </div>
+    </div>
+<?php endforeach
+?>
+    </div>
 
 <!-- <div class="row">
     <div class="col-1">

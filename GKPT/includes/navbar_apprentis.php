@@ -8,6 +8,6 @@
     </div>
     <ul> 
         <li><a href="#news">Consulter un document</a></li>
-        <li><a href="#contact">Déposer un devoir</a></li>
+        <li><a href="depot_devoir.php">Déposer un devoir</a></li>
     </ul>
 </nav>

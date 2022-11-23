@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
-
 *{
     --background: #FFF;
     --textColorB7: #e7e7e7;
@@ -12,7 +11,8 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
-   /* navbar */
+/* navbar */
+
 .thumbnail{
     position: fixed;
     background: transparent;
@@ -24,9 +24,12 @@
 }
 
 .thumbnail2{
-    visibility: hidden;
     display: block;
-    width: 200px;
+    width: 61px;
+    margin-left: auto;
+    margin-right: 1%;
+    margin-top: .3%;
+    margin-bottom: .3%;
 }
 
 .navbar {
@@ -39,9 +42,10 @@
     z-index: 1;
 }
 
-   /*fin de  navbar */
+/*fin de  navbar */
 
-                                /* page login */
+/* page login */
+
 form fieldset{
     padding: 5px;
     color:var(--dark);
@@ -63,7 +67,8 @@ form fieldset{
     width: 30%;
 }
 
-  /* logo top sio en bas de page */
+/* logo top sio en bas de page */
+
 .watermark{
     position: fixed;
     bottom: 2%;
@@ -113,7 +118,7 @@ form fieldset{
 
 /* entête  de section */
 
- .Text{
+.Text{
     color: var(--dark);
     font-size: 150%;
     background-color: var(--textColorB7);
@@ -127,7 +132,7 @@ form fieldset{
     background-color: var(--darkblue);
     color: var(--background);
     padding: 1% 5%;
-    margin: 30px auto;
+    margin: 20px auto;
     font-size: 120%;
     border-radius: 15px;
 }
@@ -177,8 +182,8 @@ form fieldset{
     color: var(--background);
 }
 */
-                         /*fin page login */
 
+/*fin page login */
 
 /* rectangle contenant l'affichage des systemes */
 
@@ -251,8 +256,6 @@ form fieldset{
     left: -23px;
     top: 8px;
 } */
-
-
 
 /* .col-2{
     position: relative;

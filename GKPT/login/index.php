@@ -10,8 +10,7 @@
         <!-- a corriger une fois la connexion des utilisateurs est prete -->
         <form action="ex.php" method="post"> 
             <fieldset align="center">
-                <p class="Text">Authentification</p>
-                <p><input type="email" class="required" name="mail" size="20" placeholder="Identifiant" required/></p>
+                <p class="Text">Authentification</p><input type="email" class="required" name="mail" size="20" placeholder="Identifiant" required/></p>
                 <p><input type="password" class="required" name="password" size="20" placeholder="Mot de passe" required/></p>
                 <input type="submit" class="button" value='Se connecter'/>
             </fieldset>

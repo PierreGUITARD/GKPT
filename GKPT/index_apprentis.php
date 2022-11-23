@@ -28,7 +28,7 @@ include(ROOT_PATH.'/includes/navbar.php');
         <div class="row">
             <h2><?php echo $machine['nom_systeme'] ?></h2>
             <img class="bigThumbnail" src="<?php echo BASE_URL.'/static/images/photo_machines/'.$machine['photo']?>">
-            <div>
+            <div class="test">
                 <button class="button-doc" onclick="location.href='<?php echo BASE_URL. '/HTML/'. $machine['lien']?>'"> Voir <?php echo $machine['nom_systeme'] ?></button>
                 <button class="button-doc" onclick="location.href='<?php echo BASE_URL. '/HTML/'. $machine['lien']?>'"> Voir <?php echo $machine['nom_systeme'] ?></button>
             </div>

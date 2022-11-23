@@ -129,10 +129,16 @@ form fieldset{
     border: 1px solid var(--darkblue);
     background-color: var(--darkblue);
     color: var(--background);
-    /* margin-left: auto;
-    margin-right: auto; */
     font-size: 100%;
     border-radius: 15px;
+}
+
+.test {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
 }
 
 footer {

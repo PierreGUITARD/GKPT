@@ -33,6 +33,7 @@ $machines = getSystems();
             <button type="button" class="button-doc" onclick="location.href='<?php echo BASE_URL. '/systeme/'. $machine['lien']?>'">Pédago </button>
             <button type="button" class="button-doc" onclick="location.href='<?php echo BASE_URL. '/systeme/'. $machine['lien']?>'">Technique</button>
         </div>
+    </div>
 <?php endforeach
 ?>
     </div>

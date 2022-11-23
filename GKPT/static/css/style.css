@@ -272,13 +272,27 @@ form fieldset{
 }
 
 .button-doc{
-    width: auto;
     border: 1px solid var(--darkblue);
     background-color: var(--darkblue);
     color: var(--background);
-    margin-left: 10%;
     font-size: 100%;
     border-radius: 15px;
+    height: 160%;
+}
+
+.row2 {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    justify-items: stretch;
+    justify-content: center;
+    gap : 10%;
+    /* overflow-y: scroll;
+    width: 95%;
+    height: 72%;
+    left: 2.5%;
+    top: 17.5%;
+    background: #dbdada; */
 }
 
 /*fin du rectangle contenant l'affichage des systemes */

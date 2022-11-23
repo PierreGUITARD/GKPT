@@ -113,7 +113,7 @@ form fieldset{
 
 /* entête  de section */
 
- .Text{
+.Text{
     color: var(--dark);
     font-size: 150%;
     background-color: var(--textColorB7);
@@ -127,7 +127,7 @@ form fieldset{
     background-color: var(--darkblue);
     color: var(--background);
     padding: 1% 5%;
-    margin: 30px auto;
+    margin: 20px auto;
     font-size: 120%;
     border-radius: 15px;
 }
@@ -177,42 +177,40 @@ form fieldset{
     color: var(--background);
 }
 */
-                         /*fin page login */
 
+/*fin page login */
 
 /* rectangle contenant l'affichage des systemes */
+
 .rectangle-gris {
-    
-position: absolute;
-display: grid;
-grid-template-columns: repeat(3, 32.01%);
-gap : 2%;
-overflow-y: scroll;
-width: 95%;
-height: 72%;
-left: 2.5%;
-top: 17.5%;
-background: #dbdada;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    overflow-y: scroll;
+    width: 95%;
+    height: 72%;
+    left: 2.5%;
+    top: 17.5%;
+    background: #dbdada;
 }
 
 .row{
-    /* display: inline-flex; */
     align-content: center;
-    margin:20px;
-    width: 300px;
-    height: 300px;
-    padding: 1rem;
+    margin: 20px;
+    width: auto;
+    height: auto;
+    padding: 2rem;
     box-shadow: 0 0 40px rgba(0, 0, 0, .5);
     border-radius: 10px;
     background: #FFF;
 }
-
 
 .row h2{
     font-size: 30px;
     text-align: center;
 
 }
+
 /* .col-1{
     position: relative;
     margin-left: 20px;
@@ -254,8 +252,6 @@ background: #dbdada;
     top: 8px;
 } */
 
-
-
 /* .col-2{
     position: relative;
     align-items: center;
@@ -270,20 +266,32 @@ background: #dbdada;
     display: block;
     width: 150px;
     height: 150px;
-    /* align-items: center; */
     margin-left: auto; 
     margin-right: auto;
-    /* padding-right: 15%;  */
 }
 
 .button-doc{
-    width: auto;
     border: 1px solid var(--darkblue);
     background-color: var(--darkblue);
     color: var(--background);
-    margin-left: 10%;
     font-size: 100%;
     border-radius: 15px;
+    height: 140%;
+}
+
+.row2 {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    justify-items: stretch;
+    justify-content: center;
+    gap : 10%;
+    /* overflow-y: scroll;
+    width: 95%;
+    height: 72%;
+    left: 2.5%;
+    top: 17.5%;
+    background: #dbdada; */
 }
 
 /*fin du rectangle contenant l'affichage des systemes */

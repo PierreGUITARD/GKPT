@@ -8,13 +8,13 @@
 <title>Bras Levier</title>
 </head>
 <header>
+<?php 
+        include(BASE_URL.'/includes/navbar.php'); 
+        ?>
     <h1 class="title" style="text-align: center;">Bras levier</h1>
 </header>
 <body>
 
-    <?php 
-    include(ROOT_PATH.'/includes/navbar.php'); 
-    ?>
 
     <div class="container">
         <iframe src="../static/Genres_Genres_04Ledocumenttechnique.pdf" class="iframe_braslevier"></iframe>

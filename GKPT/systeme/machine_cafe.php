@@ -1,26 +1,23 @@
     <?php
     require_once('../config.php');
-    include(ROOT_PATH. '/includes/head_section.php');
+    include(ROOT_PATH. '../includes/head_section.php');
     include(ROOT_PATH. '../includes/public_functions.php');
-
     ?>
-
     <title>Machine à café</title>
     </head>
 
     <body>
-
-    <!-- Contenu de la page -->
-
-    <article class="container">
-
     <!-- Barre de navigation -->
 
     <?php 
     include(ROOT_PATH.'/includes/navbar.php'); 
     ?>
 
-    <!-- // Barre de navigation-->  
+    <!-- // Barre de navigation--> 
+
+    <!-- Contenu de la page -->
+
+    <article class="rectangle-gris">
 
 
     <header>

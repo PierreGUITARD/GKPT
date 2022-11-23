@@ -2,26 +2,20 @@
 /* * * * * * * * * * * * * * *
 * Renvoie tous les articles publiés
 * * * * * * * * * * * * * * */
-function getPublishedPosts() {
+function getSystems() {
 	// utilise l'objet global $connect  pour la connexion à la base de données
 	global $connect;
 	
 	// construction de la requête
-	$sql = "SELECT * FROM produits";
+	$sql = "SELECT * FROM systeme";
 	
 	// envoie de la requete
 	$result = mysqli_query($connect, $sql);
 	
-	// récupère tous les messages sous la forme d’un tableau $final_posts
+	// récupère tous les messages sous la forme d’un tableau $machines
 
-	$posts = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-	$final_posts = array();
-	foreach ($posts as $post) {
-		$post['categorie'] = getPostTopic($post['id']); // obtenir la caégorie d'un produit
-		array_push($final_posts, $post);
-	}
-	return $final_posts;
+	$machines = mysqli_fetch_all($result, MYSQLI_ASSOC);
+	return $machines;
 }
 /* * * * * * * * * * * * * * *
 * Réçoit l'id d'un post et 

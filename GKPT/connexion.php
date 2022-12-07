@@ -24,12 +24,12 @@ if (mysqli_num_rows($result)> 0){
         }
     else {
         $_SESSION['message'] = "Veuillez entrer des identifiants valides";
-        header('location:'.BASE_URL.'/login/index.php');
+        header('location:'.BASE_URL.'/index.php');
     }
 }
 else {
     $_SESSION['message'] = "Veuillez entrer des identifiants valides";
-    header('location:'.BASE_URL.'/login/index.php');
+    header('location:'.BASE_URL.'/index.php');
 
 }   
 

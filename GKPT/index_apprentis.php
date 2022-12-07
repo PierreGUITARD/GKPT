@@ -23,7 +23,10 @@ include(ROOT_PATH.'/includes/navbar.php');
 <br> <br>
 <article class="rectangle-gris">
     <?php
-$machines = getSystems();
+// $machines = getSystems();
+$requete_sql = "SELECT * FROM `systeme` ;";
+$resultat = mysqli_query($connect,$requete_sql);
+$machines = mysqli_fetch_all($resultat,MYSQLI_ASSOC);
 
  foreach ($machines as $machine): ?>
     <div class="row">

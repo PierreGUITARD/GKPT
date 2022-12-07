@@ -8,7 +8,7 @@
     <body>
         <img src="../static/images/logo ecole.png" class="thumbnail3">
         <!-- a corriger une fois la connexion des utilisateurs est prete -->
-        <form action="ex.php" method="post"> 
+        <form action="../connexion.php" method="post"> 
             <fieldset align="center">
                 <p class="Text">Authentification</p>
                 <p><input type="email" class="required" name="mail" size="20" placeholder="Identifiant" required/></p>

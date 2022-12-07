@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 22, 2022 at 07:42 AM
+-- Generation Time: Dec 07, 2022 at 12:42 PM
 -- Server version: 5.7.24
 -- PHP Version: 8.0.1
 
@@ -42,8 +42,6 @@ CREATE TABLE `consulter` (
 CREATE TABLE `doc_pedago` (
   `id_doc_pedago` int(11) NOT NULL,
   `nom_doc_pedago` varchar(100) NOT NULL,
-  `chemin` varchar(200) NOT NULL,
-  `taille` int(11) NOT NULL,
   `type` varchar(100) NOT NULL,
   `format` varchar(100) NOT NULL,
   `date_exp` date DEFAULT NULL,
@@ -60,8 +58,6 @@ CREATE TABLE `doc_technique` (
   `id_doc_technique` int(11) NOT NULL,
   `id_Systeme` int(11) NOT NULL,
   `nom_doc` varchar(100) NOT NULL,
-  `chemin` varchar(200) NOT NULL,
-  `taille` int(11) NOT NULL,
   `type` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -69,23 +65,11 @@ CREATE TABLE `doc_technique` (
 -- Dumping data for table `doc_technique`
 --
 
-INSERT INTO `doc_technique` (`id_doc_technique`, `id_Systeme`, `nom_doc`, `chemin`, `taille`, `type`) VALUES
-(3, 1, 'PDF Test2', 'Genres_Genres_04Ledocumenttechnique.pdf', 620000, 'pdf'),
-(4, 2, 'PDF Test3', 'Genres_Genres_04Ledocumenttechnique.pdf', 620000, 'pdf'),
-(5, 3, 'PDF Test4', 'Genres_Genres_04Ledocumenttechnique.pdf', 620000, 'pdf'),
-(6, 4, 'PDF Test5', 'Genres_Genres_04Ledocumenttechnique.pdf', 620000, 'pdf');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `soumettre`
---
-
-CREATE TABLE `soumettre` (
-  `idUtilisateur` int(11) NOT NULL,
-  `idDoc_Pedago` int(11) NOT NULL,
-  `date` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `doc_technique` (`id_doc_technique`, `id_Systeme`, `nom_doc`, `type`) VALUES
+(3, 1, 'PDF Test2', 'pdf'),
+(4, 2, 'PDF Test3', 'pdf'),
+(5, 3, 'PDF Test4', 'pdf'),
+(6, 4, 'PDF Test5', 'pdf');
 
 -- --------------------------------------------------------
 
@@ -99,18 +83,19 @@ CREATE TABLE `systeme` (
   `nom_fabricant` varchar(100) NOT NULL,
   `description` text NOT NULL,
   `photo` varchar(250) DEFAULT NULL,
-  `numero_serie` int(11) NOT NULL
+  `numero_serie` int(11) NOT NULL,
+  `lien` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `systeme`
 --
 
-INSERT INTO `systeme` (`id_systeme`, `nom_systeme`, `nom_fabricant`, `description`, `photo`, `numero_serie`) VALUES
-(1, 'Ecol\'Cafe', 'Aforp', 'Machine pour fabriquer les dossettes à café', 'machine_cafe.jpg', 1),
-(2, 'hydraulis', 'Aforp', 'Machine reproduisant un barrage hydraulique', 'hydraulis.jpg', 1),
-(3, 'Staubli', 'Aforp', 'Bras robot', 'bras_robot.jpg', 1),
-(4, 'Pont Levage', 'Aforp', 'Machine de levage', 'levier.jpg', 1);
+INSERT INTO `systeme` (`id_systeme`, `nom_systeme`, `nom_fabricant`, `description`, `photo`, `numero_serie`, `lien`) VALUES
+(1, 'Ecol\'Cafe', 'Aforp', 'Machine pour fabriquer les dossettes à café', 'machine_cafe.jpg', 1, 'machine_cafe.php'),
+(2, 'hydraulis', 'Aforp', 'Machine reproduisant un barrage hydraulique', 'hydraulis.jpg', 1, 'hydraulis.php'),
+(3, 'Staubli', 'Aforp', 'Bras robot', 'bras_robot.jpg', 1, 'bras_robot.php'),
+(4, 'Pont Levage', 'Aforp', 'Machine de levage', 'levier.jpg', 1, 'bras_levier.php');
 
 -- --------------------------------------------------------
 
@@ -128,6 +113,13 @@ CREATE TABLE `utilisateurs` (
   `date_debut` date DEFAULT NULL,
   `date_fin` date DEFAULT NULL COMMENT 'Modifier en fonction des études choisies (2 ans BTS, 1 an Licence, etc...)\r\n'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `utilisateurs`
+--
+
+INSERT INTO `utilisateurs` (`id_utilisateur`, `nom_utilisateur`, `prenom_utilisateur`, `email`, `mdp_utilisateur`, `statut`, `date_debut`, `date_fin`) VALUES
+(54, 'Sengat', NULL, 'tsengat@aforp.eu', '$2y$10$PqT8rrFWr3yNDCq7SUu29eYi1lY2Rou2kdJhaQgxzr9GK24Wd.vuK', 0, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -152,13 +144,6 @@ ALTER TABLE `doc_pedago`
 ALTER TABLE `doc_technique`
   ADD PRIMARY KEY (`id_doc_technique`),
   ADD KEY `idSysteme_FK` (`id_Systeme`);
-
---
--- Indexes for table `soumettre`
---
-ALTER TABLE `soumettre`
-  ADD PRIMARY KEY (`idUtilisateur`,`idDoc_Pedago`),
-  ADD KEY `id_Doc_Pedago_FK` (`idDoc_Pedago`);
 
 --
 -- Indexes for table `systeme`
@@ -198,7 +183,7 @@ ALTER TABLE `systeme`
 -- AUTO_INCREMENT for table `utilisateurs`
 --
 ALTER TABLE `utilisateurs`
-  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- Constraints for dumped tables
@@ -208,21 +193,21 @@ ALTER TABLE `utilisateurs`
 -- Constraints for table `consulter`
 --
 ALTER TABLE `consulter`
-  ADD CONSTRAINT `id_Systeme_FK` FOREIGN KEY (`idSysteme`) REFERENCES `systeme` (`id_systeme`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `id_Utilisateur_FK` FOREIGN KEY (`idUtilisateur`) REFERENCES `utilisateurs` (`id_utilisateur`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `id_Systeme_FK` FOREIGN KEY (`idSysteme`) REFERENCES `systeme` (`id_systeme`),
+  ADD CONSTRAINT `id_Utilisateur_FK` FOREIGN KEY (`idUtilisateur`) REFERENCES `utilisateurs` (`id_utilisateur`);
+
+--
+-- Constraints for table `doc_pedago`
+--
+ALTER TABLE `doc_pedago`
+  ADD CONSTRAINT `FK_Systeme` FOREIGN KEY (`id_doc_pedago`) REFERENCES `systeme` (`id_systeme`),
+  ADD CONSTRAINT `FK_Utilisateurs` FOREIGN KEY (`id_doc_pedago`) REFERENCES `utilisateurs` (`id_utilisateur`);
 
 --
 -- Constraints for table `doc_technique`
 --
 ALTER TABLE `doc_technique`
-  ADD CONSTRAINT `idSysteme_FK` FOREIGN KEY (`id_Systeme`) REFERENCES `systeme` (`id_systeme`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Constraints for table `soumettre`
---
-ALTER TABLE `soumettre`
-  ADD CONSTRAINT `idUtilisateur_FK` FOREIGN KEY (`idUtilisateur`) REFERENCES `systeme` (`id_systeme`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `id_Doc_Pedago_FK` FOREIGN KEY (`idDoc_Pedago`) REFERENCES `doc_pedago` (`id_doc_pedago`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `FK_idSysteme` FOREIGN KEY (`id_Systeme`) REFERENCES `systeme` (`id_systeme`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

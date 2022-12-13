@@ -94,4 +94,49 @@ function getTopicNameById($id)
 	$topic = mysqli_fetch_assoc($result);
 	return $topic['name'];
 }
+
+
+function ajouter_etudiant(){
+	if(isset($_POST['submit'])){
+        global $connect;
+        $nom_utilisateur = $_POST['nom_utilisateur'];
+        $email = $_POST['email'];
+       echo $email;
+        $result = mysqli_query($connect , $sql);
+		$checkEmail = "SELECT * FROM `utilisateurs` WHERE email =  '$email'";
+	    $db = mysql_query($connect,$email);
+
+		if(mysql_affected_rows($db) > 0){
+			"cet utilisateur existe deja";
+		}
+		else{
+			$sql = "INSERT INTO `utilisateurs`(`nom_utilisateur`, `email`) VALUES('$nom_utilisateur','$email')";
+			if($result){
+					header("Location: dashboard.php?msg=New record created connect $connect fully");
+			}
+		}
+        else{
+            echo "Failed: " . mysqli_error($connect );
+        }
+    }	
+}
+
+function compare(){
+	global $connect;
+	$checkEmail = "SELECT * FROM `utilisateurs` WHERE email =  '$email'";
+	$db = mysql_query($connect,$email);
+
+
+
+	if(mysql_affected_rows($db) > 0){
+		"cet utilisateur existe deja";
+
+	}
+	else {
+		
+				echo "Failed"; 
+			}
+	
+		}	
 ?>
+

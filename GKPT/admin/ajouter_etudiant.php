@@ -1,35 +1,9 @@
 <?php
 
     include "../config.php";
-
-    // $user = 'root';
-    // $password = 'root';
-    // $db = 'projet_site';
-    // $host = 'localhost';
-    
-    // $connect = mysqli_connect($host, $user, $passwd, $bdd);
-
-
-    if(isset($_POST['submit'])){
-        
-        $nom_utilisateur = $_POST['nom_utilisateur'];
-        // $prenom_etudiant = $_POST['prenom_etudiant'];
-        $email = $_POST['email'];
-        // $mot_de_passe_edt = $_POST['mot_de_passe_edt'];
-
-        // $hash_mot_de_passe = password_hash($mot_de_passe_edt, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO `utilisateurs`(`nom_utilisateur`, `email`) VALUES('$nom_utilisateur','$email')";
-        // print_r ($sql);
-        $result = mysqli_query($connect , $sql);
-
-        if($result){
-                header("Location: dashboard.php?msg=New record created connect $connect fully");
-        }
-        else {
-            echo "Failed: " . mysqli_error($connect );
-        }
-
-    }
+    include(ROOT_PATH. '/includes/public_functions.php');
+    include(ROOT_PATH.'/includes/navbar.php'); 
+    ajouter_etudiant();
 ?>
 
 
@@ -61,11 +35,11 @@
                 
                 <div class="col mb-3 pr-50">
                     <label class="form-label">Nom Utilisteur </label>
-                    <input type="text" class="form-control" name="nom_utlisataeur" placeholder="Ton jolie nom">
+                    <input type="text" class="form-control" name="nom_utlisataeur" placeholder="Ton jolie nom" required>
                 </div>
                 <div class="col mb-3 pr-50">
                     <label class="form-label">Email: </label>
-                    <input type="mail" class="form-control" name="email" placeholder="Djhon@aforp.eu">
+                    <input type="mail" class="form-control" name="email" placeholder="Djhon@aforp.eu" required>
                 </div>
             
                <div>

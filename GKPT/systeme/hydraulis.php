@@ -2,23 +2,18 @@
     require_once('../config.php');
     include(ROOT_PATH. '../includes/head_section.php');
     include(ROOT_PATH. '../includes/public_functions.php');
-
-?>
-
-<title>Hydraulis</title>
-</head>
-<header>
-    <h1 class="title" style="text-align: center;">Hydraulis</h1>
-</header>
-<body> 
-
-
-    <?php 
-    include(ROOT_PATH.'/includes/navbar.php'); 
     ?>
+    <title>Machine à café</title>
+    </head>
 
-    <div class="container">
-        <h1>Déscription génerale</h1>
+    <body>
+        <!-- Barre de navigation -->
+        <?php  include(ROOT_PATH.'/includes/navbar.php');?>
+        <!-- // Barre de navigation--> 
+
+        <!-- Contenu de la page -->
+        <article class="rectangle-gris-page-systeme">
+            <h1 class="overlay-systeme">Hydraulis</h1>
 
         <?php
             $requete_sql = "SELECT * FROM `doc_technique` WHERE `id_Systeme` = 2 ;";
@@ -30,23 +25,13 @@
                 $chemin_acces_pdf = "../static/".$document["chemin"];
                 // echo $chemin_acces_pdf;
                 ?>
+                <div class ='row-systeme'>
                 <iframe src="<?php echo $chemin_acces_pdf; ?>" class="iframe_hydraulis"></iframe>
-            <?php 
+                </div>
+                <?php 
             }; 
             ?> 
-        <hr>
-    </div>
-</body>
-
-<footer>
-    <a href="../"><h2 class="footer">&laquo; Retour en arrière</h2></a>
-</footer>
-<!-- footer -->
-<?php 
-include(ROOT_PATH.'/includes/footer.php');
-?>
-<!-- // footer -->
-</article>
-<!-- // Contenu de la page -->
-</body>
+        </article>
+        <?php include(ROOT_PATH.'/includes/footer.php');?>
+    </body>
 </html>

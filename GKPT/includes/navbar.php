@@ -7,8 +7,8 @@
     </head>
     <body>
         <nav class="navbar">
-            <img src="<?php echo BASE_URL."/static/images/logo ecole.png"?>" class="thumbnail2">
+            <img src="<?php echo BASE_URL."/static/images/logo_ecole.png"?>" class="thumbnail2">
         </nav>
-        <img src="<?php echo BASE_URL."/static/images/logo ecole.png"?>" class="thumbnail">
+        <img src="<?php echo BASE_URL."/static/images/logo_ecole.png"?>" class="thumbnail">
     </body>
 </html>

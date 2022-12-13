@@ -41,6 +41,96 @@
 
    /*fin de  navbar */
 
+
+   /*menu déroulant */
+
+   :root{
+    --hauteur-menu: 60px;
+  }
+
+  nav {
+    width: 100%;
+    font-size: 18px;
+    position: sticky;
+    top: 0;
+  }
+
+  nav > ul {
+    display: flex;
+    text-align: center;
+    box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.3);
+    height: var(--hauteur-menu);
+  }
+   
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav > ul > li {
+    position: relative;
+    height: 100%;
+    flex: 1;
+  }
+
+  .sous-menu {
+    margin-top: var(--hauteur-menu);
+    width: 100%;    
+    text-align: left;
+    background-color: white;
+    border-radius: 2px;
+    overflow: hidden;
+    max-height: 0;
+  }
+  
+  .sous-menu > li > a {
+    height: 50px;
+    padding-left: 20px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+  }
+
+  nav > ul > li:hover > a{
+    color: #fcfdff;
+  }
+
+  .sous-menu > li:hover {
+    background-color: rgba(33, 105, 236, 0.3);
+  }
+  
+  .sous-menu > li:hover > a {
+    color: white;
+  }
+
+  @keyframes rotationFleche {
+    0% {
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(90deg);
+    }
+  }
+
+  .menu-deroulant:hover > a:after{
+    animation: rotationFleche 0.2s linear forwards;
+  }
+
+  @keyframes apparitionSousMenu {
+    0% {
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0);
+      border-top: 3px solid #2169EC;
+    }
+    30% {
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+    }
+    100% {
+      max-height: 50em;
+      border-top: 3px solid #2169EC;
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+    }
+  }
+  
+  
                                 /* page login */
 form fieldset{
     padding: 5px;
@@ -285,9 +375,56 @@ background: #dbdada;
     font-size: 100%;
     border-radius: 15px;
 }
-
 /*fin du rectangle contenant l'affichage des systemes */
 
+/*Page des docs des systemes  */
+
+.rectangle-gris-page-systeme {
+    
+    position: absolute;
+    display: grid;
+    /* grid-template-columns: repeat(5, 14%); */
+    grid-template-columns: repeat(5, 14%);
+    gap : 5%;
+    overflow-y: scroll;
+    width: 95%;
+    height: 72%;
+    left: 2.5%;
+    top: 17.5%;
+    background: #dbdada;
+    }
+
+    .row-systeme{
+        /* display: inline-flex; */
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        margin-top: 150px;  
+        margin-left: -50px;
+        padding: 1rem;
+        box-shadow: 0 0 40px rgba(0, 0, 0, .5);
+        border-radius: 10px;
+        background: #FFF;
+    }
+    
+    
+.overlay-systeme{
+    margin-top:4%;
+    margin-left: 2%;
+    width: 710%;
+    height: 12%;
+    background-color: var(--darkblue);
+    border-radius: 20px;
+    color: white;
+    text-align: left;
+}
+
+.pdf{
+    width: 100px;
+    height: 100px;
+    margin: 15%;
+}
+/*fin de la page des systemes  */
 
 /* footer  */
 
@@ -301,5 +438,4 @@ footer {
     color: white;
     text-align: center;
 }
-
 /*fin de footer  */

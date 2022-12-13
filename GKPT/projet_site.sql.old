@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 06, 2022 at 09:25 AM
+-- Generation Time: Nov 22, 2022 at 07:42 AM
 -- Server version: 5.7.24
 -- PHP Version: 8.0.1
 
@@ -45,7 +45,9 @@ CREATE TABLE `doc_pedago` (
   `chemin` varchar(200) NOT NULL,
   `taille` int(11) NOT NULL,
   `type` varchar(100) NOT NULL,
-  `format` varchar(100) NOT NULL
+  `format` varchar(100) NOT NULL,
+  `date_exp` date DEFAULT NULL,
+  `date_soumission` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -68,13 +70,10 @@ CREATE TABLE `doc_technique` (
 --
 
 INSERT INTO `doc_technique` (`id_doc_technique`, `id_Systeme`, `nom_doc`, `chemin`, `taille`, `type`) VALUES
-(1, 1, 'pdf machine à café', 'Genres_Genres_04Ledocumenttechnique.pdf', 620000, 'pdf'),
-(2, 1, 'pdf machine à café', 'Genres_Genres_04Ledocumenttechnique.pdf', 620000, 'pdf'),
-(3, 1, 'Genres_Genres_04Ledocumenttechnique', 'Genres_Genres_04Ledocumenttechnique.pdf', 64000, 'pdf'),
-(4, 1, 'Genres_Genres_04Ledocumenttechnique', 'Genres_Genres_04Ledocumenttechnique.pdf', 64000, 'pdf'),
-(5, 1, 'Genres_Genres_04Ledocumenttechnique', 'Genres_Genres_04Ledocumenttechnique.pdf', 64000, 'pdf'),
-(6, 1, 'Genres_Genres_04Ledocumenttechnique', 'Genres_Genres_04Ledocumenttechnique.pdf', 64000, 'pdf'),
-(7, 1, 'Genres_Genres_04Ledocumenttechnique', 'Genres_Genres_04Ledocumenttechnique.pdf', 64000, 'pdf');
+(3, 1, 'PDF Test2', 'Genres_Genres_04Ledocumenttechnique.pdf', 620000, 'pdf'),
+(4, 2, 'PDF Test3', 'Genres_Genres_04Ledocumenttechnique.pdf', 620000, 'pdf'),
+(5, 3, 'PDF Test4', 'Genres_Genres_04Ledocumenttechnique.pdf', 620000, 'pdf'),
+(6, 4, 'PDF Test5', 'Genres_Genres_04Ledocumenttechnique.pdf', 620000, 'pdf');
 
 -- --------------------------------------------------------
 
@@ -100,7 +99,6 @@ CREATE TABLE `systeme` (
   `nom_fabricant` varchar(100) NOT NULL,
   `description` text NOT NULL,
   `photo` varchar(250) DEFAULT NULL,
-  `lien` varchar(250) NOT NULL,
   `numero_serie` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -108,11 +106,11 @@ CREATE TABLE `systeme` (
 -- Dumping data for table `systeme`
 --
 
-INSERT INTO `systeme` (`id_systeme`, `nom_systeme`, `nom_fabricant`, `description`, `photo`, `lien`, `numero_serie`) VALUES
-(1, 'Ecol\'Cafe', 'Aforp', 'Machine pour fabriquer les dossettes à café', 'machine_cafe.jpg', 'machine_cafe.php', 1),
-(2, 'hydraulis', 'Aforp', 'Machine reproduisant un barrage hydraulique', 'hydraulis.jpg', 'hydraulis.php', 1),
-(3, 'Staubli', 'Aforp', 'Bras robot', 'bras_robot.jpg', 'bras_robot.php', 1),
-(4, 'Pont Levage', 'Aforp', 'Machine de levage', 'levier.jpg', 'bras_levier.php', 1);
+INSERT INTO `systeme` (`id_systeme`, `nom_systeme`, `nom_fabricant`, `description`, `photo`, `numero_serie`) VALUES
+(1, 'Ecol\'Cafe', 'Aforp', 'Machine pour fabriquer les dossettes à café', 'machine_cafe.jpg', 1),
+(2, 'hydraulis', 'Aforp', 'Machine reproduisant un barrage hydraulique', 'hydraulis.jpg', 1),
+(3, 'Staubli', 'Aforp', 'Bras robot', 'bras_robot.jpg', 1),
+(4, 'Pont Levage', 'Aforp', 'Machine de levage', 'levier.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -123,8 +121,12 @@ INSERT INTO `systeme` (`id_systeme`, `nom_systeme`, `nom_fabricant`, `descriptio
 CREATE TABLE `utilisateurs` (
   `id_utilisateur` int(11) NOT NULL,
   `nom_utilisateur` varchar(50) NOT NULL,
+  `prenom_utilisateur` varchar(50) DEFAULT NULL,
   `email` varchar(100) NOT NULL,
-  `statut` int(11) NOT NULL DEFAULT '0'
+  `mdp_utilisateur` varchar(256) DEFAULT NULL,
+  `statut` int(11) NOT NULL DEFAULT '0',
+  `date_debut` date DEFAULT NULL,
+  `date_fin` date DEFAULT NULL COMMENT 'Modifier en fonction des études choisies (2 ans BTS, 1 an Licence, etc...)\r\n'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -184,7 +186,7 @@ ALTER TABLE `doc_pedago`
 -- AUTO_INCREMENT for table `doc_technique`
 --
 ALTER TABLE `doc_technique`
-  MODIFY `id_doc_technique` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_doc_technique` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `systeme`

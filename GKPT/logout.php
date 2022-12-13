@@ -2,8 +2,10 @@
 <!-- bouton logout ferme la session en cours et reviens sur login.php -->
 <?php
    session_start();
-   session_destroy();
+   // regénération de l'id de session pour éviter la fixation de session
    session_regenerate_id();
+   // destruction de la session en cours
+   session_destroy();
    
-   header('location: login.php');
+   header('location: index.php');
 ?>

@@ -18,7 +18,6 @@ if (mysqli_num_rows($result)> 0){
     $result1 = mysqli_fetch_assoc($result);
 // password_verify vérifie que le mot de passe concorde avec le mot de passe hashé
     if (password_verify($MDP_Utilisateur,$result1['MDP_Utilisateur'])){
-        $_SESSION['message'] = " Vous êtes connecté";
 // la condition vérifie la valeur de la colonne 'statut' : 0 = formateur, 1 = apprenti et renvoi à l'index associé
 // si la colonne est vide l'utilisateur est renvoyé au formulaire de connexion
         if ($result1['statut'] == 0 ) { 
@@ -30,12 +29,10 @@ if (mysqli_num_rows($result)> 0){
             }
         }
     else {
-        $_SESSION['message'] = "Veuillez entrer des identifiants valides";
         header('location:'.BASE_URL.'/index.php');
     }
 }
 else {
-    $_SESSION['message'] = "Veuillez entrer des identifiants valides";
     header('location:'.BASE_URL.'/index.php');
 
 }   

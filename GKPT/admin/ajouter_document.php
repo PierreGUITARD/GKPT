@@ -1,3 +1,10 @@
+<!-- $currentDate = new DateTime();
+$currentDate->modify('+2 years');
+$twoYearsFromNow = $currentDate->format('Y-m-d'); -->
+
+<!-- SELECt rental_date, DATE_ADD(rental_date, INTERVAL 1 YEAR) from rental WHERE customer_id = 10 -->
+
+
 <?php
 
     include "../config.php";
@@ -10,7 +17,7 @@
         // $type= "DEVOIR";
         // $filename = $_FILES
         $file = $_FILES['file'];
-        $path = "../ressources/devoirs";
+        $path = "../ressources/Consignes";
 
        
     }
@@ -31,21 +38,21 @@
 </head>
 <body>
     <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: blue; color:white;">
-        Ajouter d'un Devoir
+        Ajouter d'un Document
     </nav>
 
     <div class="container">
         <div class="text-center mb-4">
-            <h3>Ajouter d'un Devoir</h3>
-            <p class="text-muted">Completez le formulaire ci-dessous afin d'ajouter un devoir</p>
+            <h3>Ajouter d'un Document</h3>
+            <p class="text-muted">Completez le formulaire ci-dessous afin d'ajouter un Document</p>
         </div>
 
         <div class="container  justify-content-center ">
 
-        <form method="post" style="width:10vw; min-width:700px;" enctype="multipart/form-data" action="upload.php">
+        <form method="post" style="width:10vw; min-width:700px;" enctype="multipart/form-data" action="upload2.php">
                 
                 <div class="col mb-3 pr-50">
-                    <label class="form-label">nom du devoir</label>
+                    <label class="form-label">nom du Document</label>
                     <input type="text" class="form-control" name="nom_doc_pedago">
                 </div>
                 <div class="col mb-3 pr-50">

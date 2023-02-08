@@ -18,8 +18,8 @@ function getSystems() {
 	return $machines;
 }
 /* * * * * * * * * * * * * * *
-* Réçoit l'id d'un post et 
-* renvoi sa catégorie (topic)
+* Réçoit l'id d'un post et   *
+* renvoi sa catégorie (topic)*
 * * * * * * * * * * * * * * */
 function getPostTopic($post_id){ //post_id correspond  à l'iD d'in produit
 	global $connect;
@@ -30,8 +30,8 @@ function getPostTopic($post_id){ //post_id correspond  à l'iD d'in produit
 	return $topic;
 }
 /* * * * * * * * * * * * * * *
-* Renvoi un post à partir 
-* de son intitulé
+* Renvoi un post à partir    *
+* de son intitulé            *
 * * * * * * * * * * * * * * */
 function getPost($slug){
 	global $connect;
@@ -48,7 +48,7 @@ function getPost($slug){
 	}
 	return $post;
 }
-/* * * * * * * * * * * * * * * *
+/* * * * * * * * * * * * * * * * *
 *  Renvoi toutes les catégories
 * * * * * * * * * * * * * * * * */
 function getAllTopics()
@@ -96,47 +96,8 @@ function getTopicNameById($id)
 }
 
 
-function ajouter_etudiant(){
-	if(isset($_POST['submit'])){
-        global $connect;
-        $nom_utilisateur = $_POST['nom_utilisateur'];
-        $email = $_POST['email'];
-       echo $email;
-        $result = mysqli_query($connect , $sql);
-		$checkEmail = "SELECT * FROM `utilisateurs` WHERE email =  '$email'";
-	    $db = mysql_query($connect,$email);
-
-		if(mysql_affected_rows($db) > 0){
-			"cet utilisateur existe deja";
-		}
-		else{
-			$sql = "INSERT INTO `utilisateurs`(`nom_utilisateur`, `email`) VALUES('$nom_utilisateur','$email')";
-			if($result){
-					header("Location: dashboard.php?msg=New record created connect $connect fully");
-			}
-		}
-        else{
-            echo "Failed: " . mysqli_error($connect );
-        }
-    }	
-}
-
-function compare(){
-	global $connect;
-	$checkEmail = "SELECT * FROM `utilisateurs` WHERE email =  '$email'";
-	$db = mysql_query($connect,$email);
 
 
 
-	if(mysql_affected_rows($db) > 0){
-		"cet utilisateur existe deja";
 
-	}
-	else {
-		
-				echo "Failed"; 
-			}
-	
-		}	
-?>
 

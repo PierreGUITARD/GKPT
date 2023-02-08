@@ -9,7 +9,7 @@
     <ul> 
         <li><a class="active" href="index.php">Accueil</a></li>
         <li><a href="#news">Ajouter/supprimer des machines</a></li>
-        <li><a href="#contact">Déposer un document</a></li>
+        <li><a href="../admin/ajouter_documents.php">Déposer un document</a></li>
         <li><a href="#about">filler</a></li>
     </ul>
 </nav>

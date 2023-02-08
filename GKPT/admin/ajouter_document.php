@@ -8,8 +8,8 @@ $twoYearsFromNow = $currentDate->format('Y-m-d'); -->
 <?php
 
     include "../config.php";
-    include(ROOT_PATH. '/includes/public_functions.php');
-    include(ROOT_PATH.'/includes/navbar.php'); 
+    include(ROOT_PATH. './includes/public_functions.php');
+    include(ROOT_PATH.'./includes/navbar.php'); 
 
     if(isset($_POST['submit'])){
      

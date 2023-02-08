@@ -41,7 +41,9 @@ include(ROOT_PATH.'/includes/navbar.php');
         <h3>Big description</h3>
         <p>small description</p>
         <h4>some detail</h4>
-        <button type="button" onclick='location.href="HTML/machine_cafe.php"'>Voir La machine à café</button>
+        <form action="HTML/machine_cafe.php">
+        <button type="submit">Voir La machine à café</button>
+        </form>
     </div>
     <div class="col-2">
         <img src="static/images/photo_machines/machine_cafe.jpg" 

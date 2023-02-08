@@ -1,13 +1,3 @@
-<?php
-
-    include "../config.php";
-    include(ROOT_PATH. './includes/public_functions.php');
-    include(ROOT_PATH.'./includes/navbar.php'); 
-    include(ROOT_PATH.'.upload.php'); 
-    
-?>
-
-
 
 
 <!DOCTYPE html>
@@ -16,38 +6,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajouter des ressources</title>
+    <title>Ajouter des etudiants</title>
     <!-- Bootstrap  OPTIONEL -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
     <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: blue; color:white;">
-        Ajouter d'un Devoir
+        Changer de mot de passe
     </nav>
 
     <div class="container">
         <div class="text-center mb-4">
-            <h3>Ajouter d'un Devoir</h3>
-            <p class="text-muted">Completez le formulaire ci-dessous afin d'ajouter un devoir</p>
+           
+            <p class="text-muted">Completez le formulaire ci-dessous afin de changer de mot de passe</p>
         </div>
 
         <div class="container  justify-content-center ">
 
-        <form method="post" style="width:10vw; min-width:700px;" enctype="multipart/form-data" action="upload.php">
+        <form action="" method="post" style="width:10vw; min-width:700px;">
                 
                 <div class="col mb-3 pr-50">
-                    <label class="form-label">nom du devoir</label>
-                    <input type="text" class="form-control" name="nom_doc_pedago">
+                    <label class="form-label">Email: </label>
+                    <input type="mail" class="form-control" name="email" placeholder="Djhon@aforp.eu" required>
                 </div>
-                <div class="col mb-3 pr-50">
-                    <input type="file"  name="file" >
-                </div>
-                <!-- <div class="col mb-3 pr-50">
-                    <input type="file" id="image" name="file">
-                </div> -->
+            
                <div>
-                <input type="submit" class="btn btn-success mb-3" name="submit">
-                <a href="dashboard.php" class="btn btn-danger mb-3 ml-3">Annuler</a>
+                <button type="submit" class="btn btn-success mb-3" name="submit">Sauvgarder</button>
+                <a href="index.php" class="btn btn-danger mb-3 ml-3">Annuler</a>
                </div>
         
             </form>

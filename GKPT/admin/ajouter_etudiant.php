@@ -1,9 +1,9 @@
 <?php
 
-    include "../config.php";
-    include(ROOT_PATH. '/includes/public_functions.php');
-    include(ROOT_PATH.'/includes/navbar.php'); 
-    ajouter_etudiant();
+include "../config.php";
+include "../includes/public_functions.php";
+include "ajouter_etudiant_func.php";
+
 ?>
 
 
@@ -31,11 +31,11 @@
 
         <div class="container  justify-content-center ">
 
-        <form action="" method="post" style="width:10vw; min-width:700px;">
+        <form action="ajouter_etudiant_func.php" method="post" style="width:10vw; min-width:700px;">
                 
                 <div class="col mb-3 pr-50">
                     <label class="form-label">Nom Utilisteur </label>
-                    <input type="text" class="form-control" name="nom_utlisataeur" placeholder="Ton jolie nom" required>
+                    <input type="text" class="form-control" name="nom_utilisateur" placeholder="Ton jolie nom" required>
                 </div>
                 <div class="col mb-3 pr-50">
                     <label class="form-label">Email: </label>
@@ -43,11 +43,57 @@
                 </div>
             
                <div>
-                <button type="submit" class="btn btn-success mb-3" name="submit">Sauvgarder</button>
-                <a href="dashboard.php" class="btn btn-danger mb-3 ml-3">Annuler</a>
+                <button type="submit" class="btn btn-success mb-3" value="submit" name="submit">Sauvgarder</button>
+                <a href="../index_formateurs.php" class="btn btn-danger mb-3 ml-3">Annuler</a>
                </div>
         
-            </form>
+        </form>
+
+        <br><br>
+
+        <form action="" method="post" >
+        <div class="container">
+        <div class="text-center mb-4">
+            <h3>Supprimer Un Etudiant</h3>
+        </div>
+        </div>
+
+            <select name="utilisateurs" id="selection_utilisateur" required>
+                <option value="">-- utilisateur à supprimer --</option>
+            <?php
+                $requete_sql = "SELECT `nom_utilisateur` FROM `utilisateurs` WHERE `statut` = 0;";
+                $resultat = mysqli_query($connect,$requete_sql);
+                $resultat_requete = mysqli_fetch_all($resultat,MYSQLI_ASSOC);
+                // print_r($resultat_requete);
+
+                foreach($resultat_requete as $utilisateurs){
+                    $utilisateur = $utilisateurs['nom_utilisateur']
+                ?>
+                    <option value="<?php echo $utilisateur;?>"><?php echo $utilisateur;?></option>
+                
+                <?php
+                    };
+                    ?>
+            </select>
+                    
+                    <?php
+                    $requete_nb_utilisateur = "SELECT COUNT(*) FROM `utilisateurs` WHERE `statut` = 0;";//améliorer
+                    $resultat_nbrequete = mysqli_query($connect,$requete_nb_utilisateur);
+                    $resultat_requete_nbuser = mysqli_fetch_all($resultat_nbrequete,MYSQLI_ASSOC);
+                    // getUSer_eleve();
+                    foreach($resultat_requete_nbuser as $nb_users){
+                        $utilisateur = $nb_users['COUNT(*)'];
+                    }
+                    ?>
+                    <br><br>
+                    <p>il y a actuellement <?php echo $utilisateur ?> étudiants</p>
+                    <br>
+
+
+                <a href="../admin/" onclick="return confirm('Êtes-vous sur de vouloir supprimer cet utilisateur?');">
+                <button type="submit" class="btn btn-success mb-3" value="suppression" name="suppression">Suppression</button></a>
+                <a href="../index_formateurs.php" class="btn btn-danger mb-3 ml-3">Annuler</a>
+        </form>
             
         </div>
     </div>

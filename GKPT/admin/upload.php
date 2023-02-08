@@ -1,8 +1,26 @@
 <?php
 // print_r($_FILES);
 // $fichier = $_FILES["file"]["name"];
-
+include "../config.php";
+	global $connect;
 if(isset($_POST["submit"])){
+    
+     
+        
+        $nom_doc_pedago= $_POST['nom_doc_pedago'];
+        $path = "../ressources/devoirs";
+        $sql = "INSERT INTO `doc_pedago`( `nom_doc_pedago`, `chemin`,`date_soumission`) VALUES ('$nom_doc_pedago','$path','now()')";
+        
+        $result = mysqli_query($connect , $sql);
+
+        if($result){
+            header("Location: dashboard.php?msg=New record created connect $connect fully");
+        }
+        else {
+            echo "Failed: " . mysqli_error($connect );
+        }
+       
+    
     $file = $_FILES['file'];
 
     $fileName = $_FILES['file']['name'];

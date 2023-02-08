@@ -7,7 +7,7 @@
         <a href="index.php"><h1>GKPT</h1></a>
     </div>
     <ul> 
-        <li><a href="#news">Consulter un document</a></li>
-        <li><a href="#contact">Déposer un devoir</a></li>
+        <li><a href="../admin/ajouter_devoir.php">Consulter un document</a></li>
+        <li><a href="../admin/ajouter_devoir.php">Déposer un devoir</a></li>
     </ul>
 </nav>

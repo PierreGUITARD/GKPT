@@ -1,9 +1,10 @@
-
 <!-- bouton logout ferme la session en cours et reviens sur login.php -->
 <?php
    session_start();
-   unset($_SESSION["email"]);
-   unset($_SESSION["MDP_Utilisateur"]);
+   // regénération de l'id de session pour éviter la fixation de session
+   session_regenerate_id();
+   // destruction de la session en cours
+   session_destroy();
    
-   header('Refresh: 2; URL = login.php');
+   header('location: index.php');
 ?>

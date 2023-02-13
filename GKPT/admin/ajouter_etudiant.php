@@ -1,38 +1,21 @@
 <?php
-
     include "../config.php";
+    include "../includes/public_functions.php";
+    // print_r($_POST);
 
-    if(isset($_POST['submit'])){
-        
-        $nom_utilisateur = $_POST['nom_utlisataeur'];
-        $email = $_POST['email'];
-
-        $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890&!?%';
-        $password = substr(str_shuffle($alphabet),0,8);
-
-        $hash_password = password_hash($password, PASSWORD_DEFAULT);
-
-        function fichier_login(){
-            global $email;
-            global $password;
-            $Ligne = "Email : ".$email."\x20 , \x20 Mot de passe : ".$password."\n";
-            file_put_contents("Login_Apprentis.csv",$Ligne, FILE_APPEND);
-        }
-        fichier_login();
-
-        $sql = "INSERT INTO `utilisateurs`(`nom_utilisateur`, `email`, `mdp_utilisateur`) VALUES ('$nom_utilisateur','$email', '$hash_password')";
-
-        $result = mysqli_query($connect , $sql);
-
+    if(isset($_POST['ajout'])){
+        add_user();
         if($result){
             header("Location: dashboard.php?msg=New record created connect $connect fully");
         }
-        else {
-            echo "Failed: " . mysqli_error($connect );
-        }
-
+        // else {
+        //     echo "Failed: " . mysqli_error($connect );
+        // }
     }
-    
+
+    elseif(isset($_POST['suppression'])){
+        delete_user();
+    }
 ?>
 
 
@@ -72,11 +55,49 @@
                 </div>
             
                <div>
-                <button type="submit" class="btn btn-success mb-3" name="submit">Sauvgarder</button>
-                <a href="dashboard.php" class="btn btn-danger mb-3 ml-3">Annuler</a>
+                <button type="submit" class="btn btn-success mb-3" value="ajout" name="ajout">Sauvgarder</button>
+                <a href="../admin/" class="btn btn-danger mb-3 ml-3">Annuler</a>
                </div>
         
-            </form>
+        </form>
+
+        <br><br>
+
+        <form action="" method="post" >
+        <div class="container">
+        <div class="text-center mb-4">
+            <h3>Supprimer Un Etudiant</h3>
+        </div>
+        </div>
+
+            <select name="utilisateurs" id="selection_utilisateur" required>
+                <option value="">-- utilisateur à supprimer --</option>
+            <?php
+                $requete_sql = "SELECT `nom_utilisateur` FROM `utilisateurs` WHERE `statut` = 0;";
+                $resultat = mysqli_query($connect,$requete_sql);
+                $resultat_requete = mysqli_fetch_all($resultat,MYSQLI_ASSOC);
+                // print_r($resultat_requete);
+
+                foreach($resultat_requete as $utilisateurs){
+                    $utilisateur = $utilisateurs['nom_utilisateur']
+                ?>
+                    <option value="<?php echo $utilisateur;?>"><?php echo $utilisateur;?></option>
+                
+                <?php
+                    };
+                    ?>
+            </select>
+                    
+                    <?php getUSer_eleve(); ?>
+                    <br><br>
+                    <p>il y a actuellement <?php echo $utilisateur ?> étudiants</p>
+                    <br>
+
+
+                <a href="../admin/" onclick="return confirm('Êtes-vous sur de vouloir supprimer cet utilisateur?');">
+                <button type="submit" class="btn btn-success mb-3" value="suppression" name="suppression">Suppression</button></a>
+                <a href="../admin/" class="btn btn-danger mb-3 ml-3">Annuler</a>
+        </form>
             
         </div>
     </div>

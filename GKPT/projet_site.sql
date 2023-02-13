@@ -40,12 +40,6 @@ CREATE TABLE `consulter` (
 --
 
 CREATE TABLE `doc_pedago` (
-  `id_doc_pedago` int(11) NOT NULL,
-  `nom_doc_pedago` varchar(100) NOT NULL,
-  `type` varchar(100) NOT NULL,
-  `format` varchar(100) NOT NULL,
-  `date_exp` date DEFAULT NULL,
-  `date_soumission` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------

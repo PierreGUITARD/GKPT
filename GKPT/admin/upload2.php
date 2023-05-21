@@ -20,7 +20,7 @@ if(isset($_POST["submit"])){
                 $fileDestination = '../ressouces/Consignes/'.$fileNameNew;
                 move_uploaded_file($fileTmpName,$fileDestination);
                 header("Location: ajouter_devoir.php?uploadsuccess");
-           
+                echo "<script>alert(\"Devoir ajouté.\")</script>";
         } else {
             echo "there was an error uploading your file !";
         }
